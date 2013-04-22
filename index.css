@@ -11,6 +11,8 @@ body {
     margin: 1em;
     padding: 0px;
   	font-family: myfont;
+  	font-size: 1.2em;
+  	line-height: 0.9em;
   	color: #ffffff;
   	background-color: #000000;
 }
@@ -91,4 +93,9 @@ td {
 
 .centerfy {
 	text-align: center;
+}
+
+li {
+	line-height: 1.6em;
+	font-size: 1.3em;
 }
