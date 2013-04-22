@@ -107,7 +107,7 @@ if ($string) {
 	$interval = date_diff($now, $then);
 	
 	// only update if it has passed 12 hours since last update
-	if (($interval->format('%a')*24+$interval->format('%h')) > 12)
+	if (($interval->format('%a')*24+$interval->format('%h')) > 8)
 	{
 	
 		$pending = 0;

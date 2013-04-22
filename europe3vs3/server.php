@@ -87,6 +87,27 @@ function checkDupeGames($jsongames, $gameplayers) {
 	return false;
 }
 
+// 
+// check names of players on a game
+// see if their name in the json players list needs an update
+//
+// the system allows the users to change their names every few weeks
+// checking for updates on all using validatetokenapi would become costly
+// this way of checking on active games is gentler on the server
+//
+function checkNamesUpdates($gamejson, $json_teams) {
+	foreach ($gamejson['players'] as $player) {
+		foreach ($json_teams as &$team) {
+			foreach ($team['players'] as &$thisplayer) {
+				//echo 'comparing '.$thisplayer['name'].' to '.$player['name'].'<br>';
+				if (($player['id'] == $thisplayer['token']) && ($player['name'] != $thisplayer['name'])) {
+					//echo 'changing '.$thisplayer['name'].' to '.$player['name'].'<br><br>';
+					$thisplayer['name'] = $player['name'];
+				}
+			}
+		}
+	}
+}
 
 date_default_timezone_set('UTC');
 $now = new DateTime("now");
@@ -105,7 +126,7 @@ if ($string) {
 	$interval = date_diff($now, $then);
 	
 	// only update if it has passed 12 hours since last update
-	if (($interval->format('%a')*24+$interval->format('%h')) > 12)
+	if (($interval->format('%a')*24+$interval->format('%h')) > 8)
 	{
 	
 		// check all games from index, if game is pending check if its over
@@ -123,6 +144,8 @@ if ($string) {
 					echo 'error retrieving gamefeed for '.$value['id'];
 					continue;
 				}
+				
+				checkNamesUpdates($gamejson,&$json['teams']);
 				
 				$deletedgame = false;
 				unset($gamejson['termsOfUse']);
