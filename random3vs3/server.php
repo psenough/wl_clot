@@ -94,7 +94,7 @@ $templates = array(
 
 date_default_timezone_set('UTC');
 $now = new DateTime("now");
-//echo 'now: '.$now->format('Y/m/d H:i:s').'<br>';
+echo 'now: '.$now->format('Y/m/d H:i:s').'<br>';
 
 $index = 'indexes/index_latest.json';
 $string = file_get_contents($index);
@@ -102,7 +102,7 @@ if ($string) {
 	//echo $string;
 	$json=json_decode($string,true);
 	
-	//echo 'then: '.$json['datetime'].'<br>';
+	echo 'then: '.$json['datetime'].'<br>';
 	$then = DateTime::createFromFormat('Y/m/d H:i:s', $json['datetime']);	
 	$interval = date_diff($now, $then);
 	
@@ -168,9 +168,20 @@ if ($string) {
 					}
 				}
 				
-				//var_dump($gamejson);
-				//echo '<br><br>';
-				$value = $gamejson;
+				if (array_key_exists('templateid',$gamejson)) {
+					$value = $gamejson;
+				} else {
+					// patch manually until fizzer updates the gamefeed api
+					$tid = $templates[0]['templateID'];
+					if (array_key_exists('templateid',$value)) {
+						$tid = $value['templateid'];
+						//echo 'there is a templateid already<br>';
+					}
+					$value = $gamejson;
+					$value['templateID'] = $tid;
+				}
+				
+				
 				
 				if (!$deletedgame) {
 					if ($gamejson['state'] == 'Finished') {
@@ -506,7 +517,7 @@ if ($string) {
 					unset($gplayer['isAI']);
 				}	
 				// need to add this property manually until Fizzer updates GameFeedAPI
-				$gamejson['templateid'] = ''.$templateID; //needs to be string
+				$gamejson['templateid'] = ''.$templateIDteams; //needs to be string
 				
 				array_push($json['games'], $gamejson);
 					
