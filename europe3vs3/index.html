@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Europe 3vs3 Ladder</title>
+	<link rel="STYLESHEET" type="text/css" href="client.css" />
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	
+	<script type="text/javascript">
+
+	function getParameterByName(name)
+	{
+	  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	  var regexS = "[\\?&]" + name + "=([^&#]*)";
+	  var regex = new RegExp(regexS);
+	  var results = regex.exec(window.location.href);
+	  if(results == null)
+		return "";
+	  else
+		return decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
+	//var dirname = 'eastasia3vs3randomladder';
+	
+	function init() {
+		credits.init();
+		//console.log('test');
+		$.ajaxSetup({ cache: false });
+		
+		loadIndex('index_latest.json');
+		
+		/*var index = getParameterByName('index');
+		
+		if (index !== "") {
+			loadIndex(index);
+		} else {
+			$.ajax({
+					url: "server.php"
+				}).done(function( content ) {
+					if (content != 'done') {
+						alert("please notify your admin about this error message: "+content);
+					}
+					
+					loadIndex('index_latest.json');
+				
+				});
+		}*/
+	}
+	
+	function loadIndex(index) {
+        $.ajaxSetup({ cache: false });
+		$.getJSON( 'indexes/'+index, 
+					function( json ) {
+						var players = document.getElementById('players');
+						var plhtml = '<h2>Active Players</h2><table><tr><th>#</th><th>Player</th><th>AVG</th><th>W</th><th>L</th></tr>';
+						
+						//todo: hide innactive
+						
+						//console.log(json);//.players.length);
+						$.each( json.teams, function( i, team ) {
+							plhtml += '<tr><td>'+(i+1)+'</td><td>';
+							var active = '';
+							if (team.active == 'false') active = ' (innactive)';
+							$.each( team.players, function( j, player ) {
+								console.log(player + ' ' + j);
+								plhtml +='<a href="http://warlight.net/Profile?p='+player.token+'">'+player.name+'</a>';
+								if (j!=2) plhtml+='<br>';
+							});
+							plhtml += '</td><td><b>'+team.rating+'</b></td><td>'+team.wins+'</td><td>'+team.losses+'</td></tr>';
+						})
+						plhtml += '</table>';
+						if (players) {
+							players.innerHTML = plhtml;
+						}
+						
+						
+						var pending_games = document.getElementById('pending_games');
+						var pghtml = '<h2>Pending Games</h2><table><tr><th>Link</th><th>Players</th><th>Turns</th></tr>';
+						$.each( json.games, function( i, game ) {
+							
+							if (game.state != 'Finished') {
+								var playersinfo = '';
+								var teams = [];
+								teams[0] = '';
+								teams[1] = '';
+								teams['unselected'] = '';
+								for (var j=0; j<game.players.length; j++) {
+									var team = game.players[j].team;
+									if (team) {
+										if (teams[parseInt(team)] == '') {
+											teams[parseInt(team)] += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a>';
+										} else {
+											teams[parseInt(team)] += ' + <a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a>';
+										}
+									}
+								}
+								//console.log(teams[0]+teams[1]);
+								if (teams[0]+teams[1] != '') {
+									playersinfo = teams[0]+'<br>vs<br>'+teams[1];
+								} else {
+									for (var j=0; j<game.players.length; j++) {
+									playersinfo += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a><br>';
+									}
+								}
+								pghtml += '<tr><td><a href="http://warlight.net/MultiPlayer?GameID='+game.id+'">'+game.id+'</a></td><td class="centerfy">'+playersinfo+'</td><td>'+game.numberOfTurns+'</td></tr>';
+							}
+						})
+						pghtml += '</table>';
+						if (pending_games) {
+							pending_games.innerHTML = pghtml;
+						}
+						
+						
+						var finished_games = document.getElementById('finished_games');
+						var fghtml = '<h2>Finished Games</h2><table><tr><th>Link</th><th>Players Won</th><th>Players Lost</th></tr>';
+						$.each( json.games, function( i, game ) {
+							//console.log("each game");
+							if (game.state == 'Finished') {
+								//console.log("each finished game");
+								var playersinfo = '';
+								var teams = [];
+								teams['Won'] = '';
+								teams['Didnt'] = '';
+								for (var j=0; j<game.players.length; j++) {
+									var state = game.players[j].state;
+									if (state == 'Won') {
+										teams['Won'] += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a><br>';
+									} else {
+										teams['Didnt'] += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a><br>';
+									}
+								}
+								fghtml += '<tr><td><a href="http://warlight.net/MultiPlayer?GameID='+game.id+'">'+game.id+'</a></td><td>'+teams['Won']+'</td><td>'+teams['Didnt']+'</td></tr>';
+							}
+						})
+						fghtml += '</table>';
+						if (finished_games) {
+							finished_games.innerHTML = fghtml;
+						}
+						
+						
+						// todo: add link somewhere to current json.ref and previous (if not 00000)
+						// todo: add link to next if loaded index is not index_latest.json	
+						
+						document.getElementById('info').innerHTML = 'Information might be outdated. Page gets updated every 12 hours.<br>Last update: '+json.datetime+' (UTC)';
+						
+					}
+				);
+	}
+	
+	var credits = {
+ 			visible: false,
+ 			d: function(id){
+ 				return document.getElementById(id);
+ 			},
+ 			init: function(){
+ 				this.d('credit').onclick = this.handler;
+ 				this.d('cb').onclick = this.handler;
+ 			},
+ 			handler: function(){
+ 				var self = credits;
+ 				self.visible = (self.visible) ? false : true;
+ 				self.d('info2').className = (self.visible) ? '' : 'hidden';
+ 			}
+ 	}
+ 	
+
+	</script>
+	
+</head>
+<body onload="init()">
+	<div id="credit">?</div>
+	<div id="info2" class="hidden">
+		<h1>Info</h1>
+		<br>
+		<p>Fixed teams.</p>
+		<p>Fixed template (<a href="http://warlight.net/MultiPlayer.aspx?TemplateID=301662">Europe Warlords</a>).</p>
+		<br>
+		<p>To join: get a team of warlight members together and post a request on the <a href="http://warlight.net/Forum/Thread?ThreadID=5775">forum thread</a>.</p>
+		<br>
+		<p>Put together by <a href="http://tpolm.org/~ps">ps</a> for <a href="http://warlight.net">Warlight</a> using the <a href="http://wiki.warlight.net/index.php/API">GameAPI</a>.</p>
+		<br>
+		<p id="cb">[ Close ]</p>
+	</div>
+
+	<h1>Europe Warlords 3vs3 Ladder</h1>
+	<div id="info">Information might be outdated. Page gets updated every 12 hours.</div>
+	<div id="content">
+		<div id="players">Loading...</div>
+		<div id="pending_games">Loading...</div>
+		<div id="finished_games">Loading...</div>
+	</div>
+</body>
+</html>

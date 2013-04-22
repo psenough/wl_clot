@@ -1,0 +1,174 @@
+/*
+@font-face {
+		  font-family: myfont;
+		  src: url('font.ttf');
+}*/
+
+* {
+margin:0px;
+padding:0px;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+  	font-family: myfont;
+  	color: #3333C6;
+  	background-color: #000000;
+}
+
+h1{
+  border: none;
+  color: #a32222;
+  font-style: normal;
+  text-align: center;
+  margin: 2em;
+}
+
+a:link, 
+a:visited, 
+a:active
+{text-decoration: none; color: cyan}
+a:hover
+{text-decoration: underline; color: cyan}
+
+#info {
+	text-align: center;
+	color: #ffffff;
+}
+
+#container {
+  	margin: 2em auto;
+}
+
+#players {
+	float: left;
+	margin: 2em;
+}
+
+#pending_games {
+	float: left;
+	text-align: left;
+	margin: 2em;
+}
+
+#finished_games {
+	float: left;
+	text-align: left;
+	margin: 2em;
+}
+
+table {
+	border: 1px solid white;
+	width: 100%;
+	text-align: left;
+	border-spacing:0;
+ 	border-collapse:collapse;
+}
+
+h2 {
+	color: #ffffff;
+	font-size: 2em;
+}
+
+th {
+	background-color: #440000;
+	color: #ffffff;
+	border: 0px;
+	padding: 4px;
+}
+
+tr {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #323232;
+}
+
+td {
+	border: 1px solid white;
+	padding: 4px;
+	white-space: nowrap;
+}
+
+.centerfy {
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+#credit {
+	border-radius: 100%;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #ffffff;
+	position: absolute;
+	z-index: 1;
+	top: 10%;
+	right: 10%;
+	padding: 0.45em 0.45em 0.45em 0.45em;
+	line-height: 16px;
+	font-size: 2em;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#credit:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#info2 {
+	font-family: "Exo",sans-serif !important;
+	width: 430px;
+	position: absolute;
+	left: 50%;
+	top: 12px;
+	z-index: 100;
+	background: rgba(255, 255, 255, 1.0);
+	padding: 25px;
+	border: 1px solid #AAA;
+	box-shadow: 0 0 12px #aaa;
+	color: #333;
+	font-family: 'Coming Soon';
+	line-height: 1.2em;
+	font-size: 0.9em;
+	margin-left: -240px;
+	font-weight: 200;
+	opacity: 1.0;
+}
+
+#info2 a {
+	text-decoration: underline;
+	font-weight: 400;
+	color: #5A5A5A;
+	-webkit-transition: all 0.2s linear;
+}
+
+
+#cb {
+	cursor: pointer;
+	font-weight: 400;
+}
+
+#cb:hover {
+	color: #000;
+}
+
+#info2 h1 {
+	color: #333;
+	font-size: 22px;
+	font-weight: 500;
+	margin: 0px 0 4px 0;
+	padding: 0 0 12px 0;
+	border-bottom: 1px solid #CCC;
+}
+
+
+#info2 ul li {
+	margin-left: 1em; 
+}
