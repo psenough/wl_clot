@@ -79,10 +79,13 @@ function updateTeams($players, $json) {
 function checkDupeGames($jsongames, $gameplayers) {
 	global $now;
 	
+	unset($g1);
 	foreach ($jsongames as $g1) {
 
 		$sixcount = 0;
+		unset($p1);
 		foreach ($g1['players'] as $p1) {
+			unset($p2);
 			foreach ($gameplayers as $p2) {
 				//echo 'comparing: '.$p1['id'].' with '.$p2.'<br>';
 				if ($p1['id'] == $p2) $sixcount++;
@@ -202,6 +205,9 @@ if ($string) {
 			$jsonteam['pendinggames'] = 0;
 		}
 		
+		//var_dump($json['teams']);
+		//echo '<br><br>';
+		
 		// go through each active game and add pending games
 		unset($game);
 		foreach ($json['games'] as $game) {
@@ -281,6 +287,10 @@ if ($string) {
 				$idx2 = -1;
 				 
 				$index = 0;
+				
+				//var_dump($json['teams']);
+				//echo '<br><br>';
+				unset($jsonteam);
 				foreach ($json['teams'] as $jsonteam) {
 					//echo 'checking this team out:<br>';
 					//var_dump($jsonteam);
@@ -304,6 +314,8 @@ if ($string) {
 							
 							if ($dupe) {
 								echo 'found a dupe game, skipping<br>';
+								//var_dump($json['teams']);
+								//echo '<br><br>';
 								continue; // skip to next team
 							}
 							
@@ -322,6 +334,9 @@ if ($string) {
 					
 					$index++;
 				}
+				
+				//var_dump($json['teams']);
+				//echo '<br><br>';
 				
 				//var_dump($players); echo '<br>';
 				
