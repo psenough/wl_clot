@@ -10,6 +10,10 @@ require('../common/dopostrequest.php');
 require('../common/warlight_gameapi.php');
 require('../common/savejsonbackup.php');
 
+date_default_timezone_set('UTC');
+$now = new DateTime("now");
+//echo 'now: '.$now->format('Y/m/d H:i:s').'<br>';
+
 //
 // when game is done go through $players and group them in winning and losing teams
 // find out which one corresponds to $json['teams'] and update them
@@ -37,11 +41,11 @@ function updateTeams($players, $json) {
 			}
 		}
 		
-		if ($foundteam == 2) {
+		if ($foundteam == 3) {
 			echo 'updating team with win<br>';
 			$jsonteam['wins']++;
 			$jsonteam['rating']++;
-			$jsonteam['pending']--;
+			//$jsonteam['pendinggames']--;
 			break;
 		}
 	}
@@ -57,11 +61,11 @@ function updateTeams($players, $json) {
 			}
 		}
 		
-		if ($foundteam == 2) {
+		if ($foundteam == 3) {
 			echo 'updating team with win<br>';
 			$jsonteam['losses']++;
 			$jsonteam['rating']--;
-			$jsonteam['pending']--;
+			//$jsonteam['pendinggames']--;
 			break;
 		}
 	}
@@ -73,7 +77,10 @@ function updateTeams($players, $json) {
 // check dupe games
 //
 function checkDupeGames($jsongames, $gameplayers) {
+	global $now;
+	
 	foreach ($jsongames as $g1) {
+
 		$sixcount = 0;
 		foreach ($g1['players'] as $p1) {
 			foreach ($gameplayers as $p2) {
@@ -82,8 +89,33 @@ function checkDupeGames($jsongames, $gameplayers) {
 			}
 		}
 		//echo 'count: '.$sixcount.'<br>';
-		if ($sixcount == 6) return true;
+		if ($sixcount == 6) {
+			// it's a dupe, but it might be old and crippled
+			//  and in that case it's not considered a dupe anymore
+			
+			// if its a pending game, it's automatically dupe
+			if ($g1['state'] != 'Finished') {
+				echo 'dupe being played: '.$g1['id'].'<br>';
+				return true;
+			} else {
+				// if its not a pending game but has recently been finished, it's still a dupe
+				if (array_key_exists('datetimefinished',$g1)) {
+					$then = DateTime::createFromFormat('Y/m/d H:i:s', $g1['datetimefinished']);	
+					$interval = date_diff($now, $then);
+					if ($interval->format('%a') < 30) {
+						echo 'dupe finished less then a month ago: '.$g1['id'].'<br>';
+						return true;
+					}
+				}
+			}
+			
+			// any other case (finished and older then 30 days)
+			// means its no longer considered a dupe
+			// so just stay calm and carry on
+			
+		}
 	}
+	
 	return false;
 }
 
@@ -109,10 +141,6 @@ function checkNamesUpdates($gamejson, $json_teams) {
 	}
 }
 
-date_default_timezone_set('UTC');
-$now = new DateTime("now");
-//echo 'now: '.$now->format('Y/m/d H:i:s').'<br>';
-
 $index = 'indexes/index_latest.json';
 $string = file_get_contents($index);
 if ($string) {
@@ -130,6 +158,7 @@ if ($string) {
 	{
 	
 		// check all games from index, if game is pending check if its over
+		unset($value);
 		foreach ($json['games'] as &$value) {
 			//echo $value['id'].' game is '.$value['state'].'<br><br>';
 			
@@ -157,15 +186,71 @@ if ($string) {
 						echo 'error updating teams';
 						die;
 					}
+					
+					$value['datetimefinished'] = $now;
 				}
+			}
+		}
+		
+		//
+		// update number of pending games of teams
+		//
+		
+		// set pendinggames of all teams to 0
+		unset($jsonteam);
+		foreach ($json['teams'] as &$jsonteam) {
+			$jsonteam['pendinggames'] = 0;
+		}
+		
+		// go through each active game and add pending games
+		unset($game);
+		foreach ($json['games'] as $game) {
+			if ($game['state'] != 'Finished') {
+				
+				unset($teamA);
+				$teamA = array();
+				unset($teamB);
+				$teamB = array();
 
+				unset($player);
+				foreach ($game['players'] as $player) {
+					if ($player['team'] == '0') {
+						array_push($teamA, $player['id']);
+					} else {
+						array_push($teamB, $player['id']);
+					}
+				}
+				
+				unset($jsonteam);
+				foreach ($json['teams'] as &$jsonteam) {
+					$foundteamA = 0;
+					$foundteamB = 0;
+					
+					unset($jsonplayer);
+					foreach ($jsonteam['players'] as $jsonplayer) {
+						foreach ($teamA as $thisplayer) {
+							if ($jsonplayer['token'] == $thisplayer) $foundteamA++;
+						}
+						foreach ($teamB as $thisplayer) {
+							if ($jsonplayer['token'] == $thisplayer) $foundteamB++;
+						}
+					}
+		
+					if ($foundteamA == 3) {						
+						$jsonteam['pendinggames']++;
+					}
+					if ($foundteamB == 3) {						
+						$jsonteam['pendinggames']++;
+					}
+				}
+				
 			}
 		}
 
 		$moregames = 0;
 		
 		// sort teams by pendinggames, then rating
-		// use thr sort run to count number of $moregames
+		// use the sort run to count number of $moregames for later use
 		unset($rating);
 		unset($games);
 		foreach ($json['teams'] as $key => $row) {
@@ -246,14 +331,12 @@ if ($string) {
 				//      and that other teams below dont have dupes with each other
 				//      in such case we should be creating games for those other teams
 				//      and this code is not
-				
-				//todo: do some check to avoid same teams playing against each other repeteadly
 
 				if ($players[5]['token'] != '') {
 					
-					//echo 'creating a game with these suckers:<br>';
-					//var_dump($players);
-					//echo '<br>hope it works...<br><br>';
+					echo 'creating a game with these suckers:<br>';
+					var_dump($players);
+					echo '<br>hope it works...<br><br>';
 					
 					$templateID = '301662';//'301366';
 					$gameName = 'Europe 3vs3 Ladder';
@@ -304,7 +387,6 @@ if ($string) {
 		}
 		array_multisort($avg, SORT_DESC, $win, SORT_DESC, $json['teams']);
 
-		
 		echo json_encode($json);
 		saveJSON($json);
 		
