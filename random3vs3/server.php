@@ -168,13 +168,13 @@ if ($string) {
 					}
 				}
 				
-				if (array_key_exists('templateid',$gamejson)) {
+				if (array_key_exists('templateID',$gamejson)) {
 					$value = $gamejson;
 				} else {
 					// patch manually until fizzer updates the gamefeed api
 					$tid = $templates[0]['templateID'];
-					if (array_key_exists('templateid',$value)) {
-						$tid = $value['templateid'];
+					if (array_key_exists('templateID',$value)) {
+						$tid = $value['templateID'];
 						//echo 'there is a templateid already<br>';
 					}
 					$value = $gamejson;
@@ -190,6 +190,7 @@ if ($string) {
 						foreach ($value['players'] as $player) {
 							if ($player['state'] == 'Won') {
 								//echo 'updating win for '.$player['id'].'<br>';
+								unset($value);
 								foreach ($json['players'] as $key => &$value) {
 									if ($json['players'][$key]['token'] == $player['id']) {
 										$json['players'][$key]['wins'] = intval($json['players'][$key]['wins'])+1;
@@ -201,6 +202,7 @@ if ($string) {
 								//echo '<br><br>';
 							} else {
 								//echo 'updating loss for '.$player['id'].'<br>';
+								unset($value);
 								foreach ($json['players'] as $key => &$value) {
 									if ($json['players'][$key]['token'] == $player['id']) {
 										$json['players'][$key]['losses'] = intval($json['players'][$key]['losses'])+1;
@@ -220,6 +222,7 @@ if ($string) {
 		}
 		
 		// flag all json db players as innactive
+		unset($player);
 		foreach ($json['players'] as &$player) {
 			$player['active'] = 'false';
 		}
@@ -314,15 +317,25 @@ if ($string) {
 		$templateIDteams = $templates[0]['templateIDteams'];
 		$gameName = $templates[0]['gameName'];
 		$lowestcount = 0;
+		unset($template);
 		foreach ($templates as $template) {
+			echo 'checking for '.$template['gameName'].' '.$template['templateID'].' '. $template['templateIDteams'].'<br>';
 			$countgames = 0;
+			unset($game);
 			foreach ($json['games'] as $game) {
+				echo 'testing game '.$game['id'].' with templateID '.$game['templateID'].'<br>';
 				if (array_key_exists('templateID',$game)){
+					//echo 'templateID exists<br>';
+					//echo $game['templateID'].' '.$template['templateID'].' '.$template['templateIDteams'].'<br>';
 					if (
 						($game['templateID'] == $template['templateID']) || 
 						($game['templateID'] == $template['templateIDteams'])
-					   ) $countgames++;
+					   ) {
+					   		//echo 'templateID got counted<br>';
+					   		$countgames++;
+					   }
 				} else {
+					echo 'templateID doesnt exist<br>';
 					// if there is no templateID stored it means the game was created
 					// during the initial eastasia stage of the ladder,
 					// so it's +1 for that template
@@ -413,7 +426,7 @@ if ($string) {
 						unset($gplayer['isAI']);
 					}	
 					// need to add this property manually until Fizzer updates GameFeedAPI
-					$gamejson['templateid'] = ''.$templateID; //needs to be string
+					$gamejson['templateID'] = ''.$templateID; //needs to be string
 					
 					array_push($json['games'], $gamejson);
 					
@@ -517,7 +530,7 @@ if ($string) {
 					unset($gplayer['isAI']);
 				}	
 				// need to add this property manually until Fizzer updates GameFeedAPI
-				$gamejson['templateid'] = ''.$templateIDteams; //needs to be string
+				$gamejson['templateID'] = ''.$templateIDteams; //needs to be string
 				
 				array_push($json['games'], $gamejson);
 					
