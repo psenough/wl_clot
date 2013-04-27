@@ -190,7 +190,7 @@ if ($string) {
 						die;
 					}
 					
-					$value['datetimefinished'] = $now;
+					$value['datetimefinished'] = $now->format('Y/m/d H:i:s');
 				}
 			}
 		}
