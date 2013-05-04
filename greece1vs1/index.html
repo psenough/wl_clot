@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Europe 3vs3 Ladder</title>
+	<title>Greece 1vs1 Ladder</title>
 	<link rel="STYLESHEET" type="text/css" href="client.css" />
 	<script type="text/javascript" src="../common/jquery-1.9.1.min.js"></script>
 	
@@ -19,32 +19,17 @@
 	  else
 		return decodeURIComponent(results[1].replace(/\+/g, " "));
 	}
-
-	//var dirname = 'eastasia3vs3randomladder';
 	
 	function init() {
-		credits.init();
+		credits.init();	
 		//console.log('test');
 		$.ajaxSetup({ cache: false });
+		$.ajax({
+			url: "server.php?create=false"
+		}).done(function( content ) {
+				loadIndex('index_latest.json');
+		});
 		
-		loadIndex('index_latest.json');
-		
-		/*var index = getParameterByName('index');
-		
-		if (index !== "") {
-			loadIndex(index);
-		} else {
-			$.ajax({
-					url: "server.php"
-				}).done(function( content ) {
-					if (content != 'done') {
-						alert("please notify your admin about this error message: "+content);
-					}
-					
-					loadIndex('index_latest.json');
-				
-				});
-		}*/
 	}
 	
 	function loadIndex(index) {
@@ -53,20 +38,15 @@
 					function( json ) {
 						var players = document.getElementById('players');
 						var plhtml = '<h2>Active Players</h2><table><tr><th>#</th><th>Player</th><th>AVG</th><th>W</th><th>L</th></tr>';
-						
-						//todo: hide innactive
+						// todo: hide innactive
 						
 						//console.log(json);//.players.length);
-						$.each( json.teams, function( i, team ) {
-							plhtml += '<tr><td>'+(i+1)+'</td><td>';
+						$.each( json.players, function( i, player ) {
+							//console.log(player + ' ' + i);
 							var active = '';
-							if (team.active == 'false') active = ' (innactive)';
-							$.each( team.players, function( j, player ) {
-								console.log(player + ' ' + j);
-								plhtml +='<a href="http://warlight.net/Profile?p='+player.token+'">'+player.name+'</a>';
-								if (j!=2) plhtml+='<br>';
-							});
-							plhtml += '</td><td><b>'+team.rating+'</b></td><td>'+team.wins+'</td><td>'+team.losses+'</td></tr>';
+							if (player.active == 'false') active = ' (innactive)';
+							plhtml += '<tr><td>'+(i+1)+'</td><td><a href="http://warlight.net/Profile?p='+player.token+'">'+player.name+'</a>'+active+'</td><td><b>'+player.average+'</b></td><td>'+player.wins+'</td><td>'+player.losses+'</td></tr>';
+							if ((i+1)%6 == 0) plhtml += '<tr><th colspan="5">&nbsp;</th></tr>';
 						})
 						plhtml += '</table>';
 						if (players) {
@@ -85,6 +65,8 @@
 								teams[1] = '';
 								teams['unselected'] = '';
 								for (var j=0; j<game.players.length; j++) {
+									//console.log(game.players[j].team);
+									// team isnt actually implemented on GameFeed API yet
 									var team = game.players[j].team;
 									if (team) {
 										if (teams[parseInt(team)] == '') {
@@ -112,7 +94,7 @@
 						
 						
 						var finished_games = document.getElementById('finished_games');
-						var fghtml = '<h2>Finished Games</h2><table><tr><th>Link</th><th>Players Won</th><th>Players Lost</th></tr>';
+						var fghtml = '<h2>Finished Games</h2><table><tr><th>Link</th><th>Won</th><th>Lost</th></tr>';
 						$.each( json.games, function( i, game ) {
 							//console.log("each game");
 							if (game.state == 'Finished') {
@@ -141,12 +123,12 @@
 						// todo: add link somewhere to current json.ref and previous (if not 00000)
 						// todo: add link to next if loaded index is not index_latest.json	
 						
-						document.getElementById('info').innerHTML = 'Information might be outdated. Page gets updated every 8 hours.<br>Last update: '+json.datetime+' (UTC)';
+						//document.getElementById('info').innerHTML = 'Information might be outdated. Page gets updated every 12 hours.<br>Last update: '+json.datetime+' (UTC)';
 						
 					}
 				);
 	}
-	
+
 	var credits = {
  			visible: false,
  			d: function(id){
@@ -162,8 +144,27 @@
  				self.d('info2').className = (self.visible) ? '' : 'hidden';
  			}
  	}
- 	
+ 
+	
+ 	function startGame() {
+ 		document.getElementById('start_new_game').disabled = true;
+ 		document.getElementById('start_new_game').value = 'Starting...';
+ 	 	$.ajaxSetup({ cache: false });
+		
+		$.ajax({
+			url: "server.php"
+		}).done(function( content ) {
+			
+			var myarr = content.split(":");
 
+			if (myarr[0] != 'done') {
+				alert("please notify your admin about this error message: "+content);
+			} else {
+				window.location.href = 'http://warlight.net/MultiPlayer?GameID='+myarr[1];
+			}
+		});
+ 	}
+ 	
 	</script>
 	
 </head>
@@ -173,18 +174,20 @@
 	<div id="info2" class="hidden">
 		<h1>Info</h1>
 		<br>
-		<p>Fixed teams.</p>
-		<p>Fixed template (<a href="http://warlight.net/MultiPlayer.aspx?TemplateID=301662">Europe Warlords</a>).</p>
+		<p>1vs1 Ladder on the <a href="http://warlight.net/MultiPlayer?TemplateID=305181">Ancient Greece map, szeweningen's settings</a>.</p>
+		<p>The game is realtime, 1vs1, 0% luck, Straight Round, no cards.</p>
+		<p>This ladder is for Members only due to the GameAPI limitations.</p>
 		<br>
-		<p>To join: get a team of warlight members together and post a request on the <a href="http://warlight.net/Forum/Thread?ThreadID=5775">forum thread</a>.</p>
+		<p>Click the button to create a new official game. Only official games count for the ranking.</p>
 		<br>
-		<p>Put together by <a href="http://tpolm.org/~ps">ps</a> for <a href="http://warlight.net">Warlight</a> using the <a href="http://wiki.warlight.net/index.php/API">GameAPI</a>.</p>
+		<p>Put together by <a href="http://tpolm.org/~ps">ps</a> for <a href="http://warlight.net">Warlight</a> players using the <a href="http://wiki.warlight.net/index.php/API">GameAPI</a>.</p>
 		<br>
 		<p id="cb">[ Close ]</p>
 	</div>
 
-	<h1>Europe Warlords 3vs3 Ladder</h1>
-	<div id="info">Information might be outdated. Page gets updated every 12 hours.</div>
+	<h1>Greece 1vs1 Ladder</h1>
+	<!--<div id="info">Information might be outdated. Page gets updated every 8 hours.</div>-->
+	<div id="new_game"><input id="start_new_game" name="start_new_game" type="button" value="Create Ranking Game" onclick="startGame();"></div>
 	<div id="content">
 		<div id="players">Loading...</div>
 		<div id="pending_games">Loading...</div>

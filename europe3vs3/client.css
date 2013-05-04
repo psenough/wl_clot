@@ -170,4 +170,9 @@ td {
 	border-bottom: 1px solid #CCC;
 }
 
-
+#home {
+	position: absolute;
+	z-index: 1;
+	top: 32px;
+	left: 32px;
+}
