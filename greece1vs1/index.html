@@ -22,7 +22,7 @@
 	}
 	
 	function init() {
-/*		credits.init();	
+		credits.init();	
 		//console.log('test');
 		$.ajaxSetup({ cache: false });
 		$.ajax({
@@ -30,8 +30,7 @@
 		}).done(function( content ) {
 				loadIndex('index_latest.json');
 		});
-*/
-		loadIndex('index_latest.json');		
+//		loadIndex('index_latest.json');		
 	}
 	var glicko, glicko_players;
 						
@@ -129,8 +128,15 @@
 										gstack[1] = glicko_players[game.players[j].id];
 										teams['Didnt'] += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a><br>';
 									}
-									gstack[2] = 1;
+									if (state == 'EndedByVote') {
+										gstack[0] = glicko_players[game.players[0].id];
+										gstack[1] = glicko_players[game.players[1].id];
+										gstack[2] = 0.5;
+									} else {
+										gstack[2] = 1;
+									}
 								}
+								
 								matches.push(gstack);
 								if (i%5 == 0)
 								{
