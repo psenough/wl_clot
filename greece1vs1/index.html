@@ -5,6 +5,7 @@
 	<title>Greece 1vs1 Ladder</title>
 	<link rel="STYLESHEET" type="text/css" href="client.css" />
 	<script type="text/javascript" src="../common/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../common/glicko2.js"></script>
 	
 	<script type="text/javascript">
 
@@ -21,7 +22,7 @@
 	}
 	
 	function init() {
-		credits.init();	
+/*		credits.init();	
 		//console.log('test');
 		$.ajaxSetup({ cache: false });
 		$.ajax({
@@ -29,29 +30,35 @@
 		}).done(function( content ) {
 				loadIndex('index_latest.json');
 		});
-		
+*/
+		loadIndex('index_latest.json');		
 	}
-	
+	var glicko, glicko_players;
+						
 	function loadIndex(index) {
         $.ajaxSetup({ cache: false });
 		$.getJSON( 'indexes/'+index, 
 					function( json ) {
-						var players = document.getElementById('players');
-						var plhtml = '<h2>Active Players</h2><table><tr><th>#</th><th>Player</th><th>AVG</th><th>W</th><th>L</th></tr>';
-						// todo: hide innactive
-						
-						//console.log(json);//.players.length);
+					
+					
+					
+						var settings = {
+						  tau : 0.5,
+						  rpd : 604800,
+						  rating : 1500,
+						  rd : 300,
+						  vol : 0.06
+						};
+						glicko = new glicko2.Glicko2(settings);
+						glicko_players = [];
+						//var player_avg_game_count = 0;
+						//alert(json.players.length);
+					
 						$.each( json.players, function( i, player ) {
-							//console.log(player + ' ' + i);
-							var active = '';
-							if (player.active == 'false') active = ' (innactive)';
-							plhtml += '<tr><td>'+(i+1)+'</td><td><a href="http://warlight.net/Profile?p='+player.token+'">'+player.name+'</a>'+active+'</td><td><b>'+player.average+'</b></td><td>'+player.wins+'</td><td>'+player.losses+'</td></tr>';
-							if ((i+1)%6 == 0) plhtml += '<tr><th colspan="5">&nbsp;</th></tr>';
+							glicko_players[player.token] = glicko.makePlayer();
+							//player_avg_game_count += (player.wins+player.losses);
 						})
-						plhtml += '</table>';
-						if (players) {
-							players.innerHTML = plhtml;
-						}
+						//var avg_games = player_avg_game_count / json.players.length;
 						
 						
 						var pending_games = document.getElementById('pending_games');
@@ -92,26 +99,45 @@
 							pending_games.innerHTML = pghtml;
 						}
 						
+						//json.games.sort(function(a,b){return b.id - a.id;});
+						var matches = [];
 						
+						var sortable = [];
+						for (var g in json.games)
+      						sortable.push([g, json.games[g]]);
+      
+						sortable.sort(function(g1, g2){ return g2[1].id - g1[1].id; });
+
 						var finished_games = document.getElementById('finished_games');
-						var fghtml = '<h2>Finished Games</h2><table><tr><th>Link</th><th>Won</th><th>Lost</th></tr>';
-						$.each( json.games, function( i, game ) {
+						var fghtml = '<h2>Finished Games</h2><table><tr><th>Link</th><th>Won</th><th>Lost</th><th>Date (UTC)</th></tr>';
+						$.each( sortable, function( i, ourgame ) {
 							//console.log("each game");
+							var game = ourgame[1];
 							if (game.state == 'Finished') {
 								//console.log("each finished game");
 								var playersinfo = '';
 								var teams = [];
 								teams['Won'] = '';
 								teams['Didnt'] = '';
+								var gstack = [];
 								for (var j=0; j<game.players.length; j++) {
 									var state = game.players[j].state;
 									if (state == 'Won') {
+										gstack[0] = glicko_players[game.players[j].id];
 										teams['Won'] += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a><br>';
 									} else {
+										gstack[1] = glicko_players[game.players[j].id];
 										teams['Didnt'] += '<a href="http://warlight.net/Profile?p='+game.players[j].id+'">'+game.players[j].name+'</a><br>';
 									}
+									gstack[2] = 1;
 								}
-								fghtml += '<tr><td><a href="http://warlight.net/MultiPlayer?GameID='+game.id+'">'+game.id+'</a></td><td>'+teams['Won']+'</td><td>'+teams['Didnt']+'</td></tr>';
+								matches.push(gstack);
+								if (i%5 == 0)
+								{
+									glicko.updateRatings(matches);
+									matches = [];
+								}
+								fghtml += '<tr><td><a href="http://warlight.net/MultiPlayer?GameID='+game.id+'">'+game.id+'</a></td><td>'+teams['Won']+'</td><td>'+teams['Didnt']+'</td><td>'+game.datetime+'</td></tr>';
 							}
 						})
 						fghtml += '</table>';
@@ -119,12 +145,26 @@
 							finished_games.innerHTML = fghtml;
 						}
 						
+						glicko.updateRatings(matches);
+						json.players.sort(function(pl1, pl2){ return glicko_players[pl2.token].getRating() - glicko_players[pl1.token].getRating(); });
 						
-						// todo: add link somewhere to current json.ref and previous (if not 00000)
-						// todo: add link to next if loaded index is not index_latest.json	
-						
-						//document.getElementById('info').innerHTML = 'Information might be outdated. Page gets updated every 12 hours.<br>Last update: '+json.datetime+' (UTC)';
-						
+						var players = document.getElementById('players');
+						var plhtml = '<h2>Active Players</h2><table><tr><th>#</th><th>Player</th><th>Games</th><th>Win %</th><th>Rating</th></tr>';
+						//console.log(json);//.players.length);
+						$.each( json.players, function( i, player ) {
+							//console.log(player + ' ' + i);
+							var active = '';
+							//if (player.active == 'false') active = ' (innactive)';
+							plhtml += '<tr><td>'+(i+1)+'</td><td><a href="http://warlight.net/Profile?p='+player.token+'">'+player.name+'</a>'+active+'</td><td>'+player.wins+'/'+(player.wins+player.losses)+'</td><td>'+Math.round(player.wins/(player.wins+player.losses)*100)+' %</td><td>'+glicko_players[player.token].getRating()+'</td></tr>';
+							if ((i+1)%10 == 0) plhtml += '<tr><th colspan="6">&nbsp;</th></tr>';
+						})
+						plhtml += '</table>';
+						if (players) {
+							players.innerHTML = plhtml;
+						}
+
+
+
 					}
 				);
 	}
@@ -180,13 +220,15 @@
 		<br>
 		<p>Click the button to create a new official game. Only official games count for the ranking.</p>
 		<br>
+		<p>The rating is calculated using <a href="http://en.wikipedia.org/wiki/Glicko_rating_system">Glicko-2</a> algorythm in batches of 5 games.</p>
+		<br>
 		<p>Put together by <a href="http://tpolm.org/~ps">ps</a> for <a href="http://warlight.net">Warlight</a> players using the <a href="http://wiki.warlight.net/index.php/API">GameAPI</a>.</p>
 		<br>
 		<p id="cb">[ Close ]</p>
 	</div>
 
 	<h1>Greece 1vs1 Ladder</h1>
-	<!--<div id="info">Information might be outdated. Page gets updated every 8 hours.</div>-->
+
 	<div id="new_game"><input id="start_new_game" name="start_new_game" type="button" value="Create Ranking Game" onclick="startGame();"></div>
 	<div id="content">
 		<div id="players">Loading...</div>
@@ -194,4 +236,5 @@
 		<div id="finished_games">Loading...</div>
 	</div>
 </body>
+<!--<body>Debugging stuff... be back soon.</body>-->
 </html>

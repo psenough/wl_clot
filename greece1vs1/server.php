@@ -31,8 +31,10 @@ if ($string) {
 		$openseat = -1;
 	
 		// check all games from index, if game is pending check if its over
+		unset($value);
+		unset($jkey);
 		foreach ($json['games'] as $jkey => &$value) {
-			//echo $value['id'].' game is '.$value['state'].'<br><br>';
+			//echo 'checking '.$value['id'].'<br><br>';
 			
 			// if game was previously not finished, recheck it now
 			if ( 	(array_key_exists('state',$value)) &&
@@ -69,6 +71,7 @@ if ($string) {
 						}
 					}
 					if (!$present) {
+						//echo 'not present yet, lets fix that...<br><br>';
 						unset($playerjson);			
 						$playerjson = API_ValidateInviteToken($player['id']);
 						if (array_key_exists('error',$playerjson)) {
@@ -79,7 +82,7 @@ if ($string) {
 						unset($playerjson['isMember']);
 						unset($playerjson['color']);
 						unset($playerjson['tagline']);
-						$playerjson['token'] = ''.$jplayer['token']; //needs to be string
+						$playerjson['token'] = ''.$player['id']; //needs to be string
 						$playerjson['wins'] = 0;
 						$playerjson['losses'] = 0;
 						$playerjson['average'] = 0;	
@@ -90,31 +93,35 @@ if ($string) {
 				}
 
 				if ($gamejson['state'] == 'Finished') {
-					unset($player);
-					foreach ($value['players'] as $player) {
-						if ($player['state'] == 'Won') {
-							//echo 'updating win for '.$player['id'].'<br>';
-							unset($thisvalue);
-							foreach ($json['players'] as $key => &$thisvalue) {
-								if ($json['players'][$key]['token'] == $player['id']) {
-									$json['players'][$key]['wins'] = intval($json['players'][$key]['wins'])+1;
-									$json['players'][$key]['average'] = intval($json['players'][$key]['average'])+1;
-									//echo $json['players'][$key]['token'].' now has: '.$json['players'][$key]['wins'].'<br>';
+					unset($vplayer);
+					foreach ($gamejson['players'] as $vplayer) {
+						if ($vplayer['state'] == 'Won') {
+							//echo 'updating win for '.$vplayer['id'].'<br>';
+							unset($tkey);
+							unset($tvalue);
+							foreach ($json['players'] as $tkey => &$tvalue) {
+								if ($json['players'][$tkey]['token'] == $vplayer['id']) {
+									$json['players'][$tkey]['wins'] = intval($json['players'][$tkey]['wins'])+1;
+									$json['players'][$tkey]['average'] = intval($json['players'][$tkey]['average'])+1;
+									//echo $json['players'][$tkey]['token'].' now has: '.$json['players'][$tkey]['wins'].'<br>';
 								}
 							}
 						} else {
-							//echo 'updating loss for '.$player['id'].'<br>';
-							unset($thisvalue);
-							foreach ($json['players'] as $key => &$thisvalue) {
-								if ($json['players'][$key]['token'] == $player['id']) {
-									$json['players'][$key]['losses'] = intval($json['players'][$key]['losses'])+1;
-									$json['players'][$key]['average'] = intval($json['players'][$key]['average'])-1;
+							//echo 'updating loss for '.$vplayer['id'].'<br>';
+							unset($pkey);
+							unset($pvalue);
+							foreach ($json['players'] as $pkey => &$pvalue) {
+								if ($json['players'][$pkey]['token'] == $vplayer['id']) {
+									$json['players'][$pkey]['losses'] = intval($json['players'][$pkey]['losses'])+1;
+									$json['players'][$pkey]['average'] = intval($json['players'][$pkey]['average'])-1;
+									//echo $json['players'][$pkey]['token'].' now has: '.$json['players'][$pkey]['wins'].'<br>';									
 								}
 							}
 						}
 					}
 				}
 
+				$gamejson['datetime'] = $now->format('Y/m/d H:i:s');
 				$value = $gamejson;
 				
 				// if one of the listed games has open seats we should return the gameid
@@ -124,9 +131,13 @@ if ($string) {
 					
 			}
 		}
+		
+		//var_dump($json['players']);
 
 
 		// sort index db players list by average (wins-losses, prioritize wins on draw)
+		unset($key);
+		unset($row);
 		foreach ($json['players'] as $key => $row) {
 			$avg[$key] = $row['average'];
 			$win[$key] = $row['wins'];
@@ -179,6 +190,7 @@ if ($string) {
 					unset($gplayer['color']);
 					unset($gplayer['isAI']);
 				}	
+				$gamejson['datetime'] = $now->format('Y/m/d H:i:s');
 			
 				array_push($json['games'], $gamejson);
 			
@@ -189,7 +201,7 @@ if ($string) {
 		$json['datetime'] = $now->format('Y/m/d H:i:s');
 		
 		//echo json_encode($json);
-		saveJSON($json);
+		saveJSON($json, false);
 	
 	}
 	
