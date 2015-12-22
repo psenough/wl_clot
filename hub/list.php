@@ -1,34 +1,57 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
 
 require('simple_html_dom.php');
+require('../common/savejsonbackup.php');
+
+
+date_default_timezone_set('UTC');
+$now = new DateTime("now");
+//echo 'now: '.$now->format('Y/m/d H:i:s').'<br>';
+
+$cachefilename = 'cache.json';
+$string = file_get_contents($cachefilename);
+if ($string) {
+	//echo $string;
+	$json1=json_decode($string,true);
+	if (array_key_exists('datetime', $json1)) {
+		
+		//echo 'then: '.$json1['datetime'].'<br>';
+		$then = DateTime::createFromFormat('Y/m/d H:i:s', $json1['datetime']);	
+		$interval = date_diff($now, $then);
+		
+		if ($interval->format('%i') > 1) {
+			echo $string;
+			return;
+		}
+	}
+}
+
 
 $clots = [
-			[ 	
-				"url" => "http://real-time-ladder.appspot.com/lot/5649391675244544",
-				"type" => "realtime",
-				"url_type" => "fizzer_example"
-			],
-			[ 	
-				"url" => "http://wl1v1-clot.appspot.com/lot/5629499534213120",
-				"type" => "multiday",
-				"url_type" => "fizzer_example"
-			],
-			[ 
-				"url" => "http://multi-day-ladder.appspot.com/lot/5629499534213120",
-				"type" => "multiday",
-				"url_type" => "fizzer_example"
-			],
-			[
-				"url" => "http://warladder.net",
-				"type" => "multiday",
-				"url_type" => "dutch"
-			]
-		];
-		
-//var_dump($clots);
+	[ 	
+		"url" => "http://real-time-ladder.appspot.com/lot/5649391675244544",
+		"type" => "realtime",
+		"url_type" => "fizzer_example"
+	],
+	[ 	
+		"url" => "http://wl1v1-clot.appspot.com/lot/5629499534213120",
+		"type" => "multiday",
+		"url_type" => "fizzer_example"
+	],
+	[ 
+		"url" => "http://multi-day-ladder.appspot.com/lot/5629499534213120",
+		"type" => "multiday",
+		"url_type" => "fizzer_example"
+	],
+	[
+		"url" => "http://warladder.net",
+		"type" => "multiday",
+		"url_type" => "dutch"
+	]
+];
 		
 $output = [];
 $i = 0;
@@ -42,6 +65,7 @@ foreach ($clots as $clot) {
 	if ($html) {
 		switch($clot["url_type"]) {
 			case "fizzer_example":
+				//TODO: extract template info
 				$output[$i]['name'] = $html->find("h1", 0)->plaintext;
 				$output[$i]['players'] = count($html->find('.table',1)->find('tr'))-1;
 				$output[$i]['type'] = $clot["type"];
@@ -63,6 +87,13 @@ foreach ($clots as $clot) {
 
 //var_dump($output);
 
-echo '{"ladders":'.json_encode($output).'}';
+$json['ladders'] = $output;
+$json['datetime'] = $now->format('Y/m/d H:i:s');
+
+$myoutput = json_encode($json);
+
+file_put_contents($cachefilename, $myoutput);
+
+echo $myoutput;
 
 ?>
