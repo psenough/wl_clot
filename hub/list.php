@@ -20,9 +20,11 @@ if ($string) {
 		
 		//echo 'then: '.$json1['datetime'].'<br>';
 		$then = DateTime::createFromFormat('Y/m/d H:i:s', $json1['datetime']);	
-		$interval = date_diff($now, $then);
 		
-		if ($interval->format('%i') > 1) {
+		$then1 = $then->add(new DateInterval('PT2M'));
+		//echo 'then+1: '.$then1->format('Y/m/d H:i:s').'<br>';
+		
+		if ($then1 > $now) {
 			echo $string;
 			return;
 		}
