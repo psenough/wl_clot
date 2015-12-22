@@ -7,6 +7,11 @@ require('simple_html_dom.php');
 
 $clots = [
 			[ 	
+				"url" => "http://real-time-ladder.appspot.com/lot/5649391675244544",
+				"type" => "realtime",
+				"url_type" => "fizzer_example"
+			],
+			[ 	
 				"url" => "http://wl1v1-clot.appspot.com/lot/5629499534213120",
 				"type" => "multiday",
 				"url_type" => "fizzer_example"
@@ -38,7 +43,7 @@ foreach ($clots as $clot) {
 		switch($clot["url_type"]) {
 			case "fizzer_example":
 				$output[$i]['name'] = $html->find("h1", 0)->plaintext;
-				$output[$i]['players'] = count($html->find('.table',1)->find('tr'));
+				$output[$i]['players'] = count($html->find('.table',1)->find('tr'))-1;
 				$output[$i]['type'] = $clot["type"];
 			break;
 			case "dutch":
