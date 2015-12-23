@@ -18,7 +18,7 @@ $templateID = '305181';
 $gameName = 'Greece 1vs1 Ladder';
 unset($players);
 $players = array( 	
-					0=>array('token' => 'OpenSeat'),
+					0=>array('token' => '486201411'),
 					1=>array('token' => 'OpenSeat')
 				);
 //$personalMessage = 'http://tinyurl.com/wl-clot-greece';

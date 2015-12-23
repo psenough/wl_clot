@@ -53,10 +53,10 @@ function do_post_request3($url, $data) {
 	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);                                                                  
-	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
-		//'Content-Type: application/json',
-		'Content-type: application/x-www-form-urlencoded',		
+		'Content-Type: application/json',
+		//'Content-type: application/x-www-form-urlencoded',		
 		'Content-Length: ' . strlen($data))                                                                       
 	);    
 
