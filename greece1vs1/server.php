@@ -163,7 +163,8 @@ if ($string) {
 									0=>array('token' => 'OpenSeat'),
 									1=>array('token' => 'OpenSeat')
 								);
-				$personalMessage = 'http://tinyurl.com/wl-clot-greece';
+				//$personalMessage = 'http://tinyurl.com/wl-clot-greece';
+				$personalMessage = 'http://php-psenough.rhcloud.com/greece1vs1/';
 		
 				$resultjson = API_CreateGame(
 									$templateID,
@@ -173,8 +174,8 @@ if ($string) {
 									);
 				
 				if (array_key_exists('error',$resultjson)) {
-					echo 'error creating game with template '.$templateID.' '.$gameName.' with players:<br>';
-					var_dump($players);
+					//echo 'error creating game with template '.$templateID.' '.$gameName.' with players:<br>';
+					//var_dump($players);
 					echo $resultjson['error'];
 					die;
 				} else {
