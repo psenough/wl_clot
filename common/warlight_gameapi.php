@@ -5,7 +5,7 @@ function API_GameFeed($value_id) {
 	global $email;
 	global $apitoken;
 	
-	$url = 'http://warlight.net/API/GameFeed?GameID='.$value_id;
+	$url = 'https://www.warlight.net/API/GameFeed?GameID='.$value_id;
 	//echo $url.'<br><br>';
 
 	$arr = array(
@@ -21,7 +21,7 @@ function API_ValidateInviteToken($player_id) {
 	global $email;
 	global $apitoken;
 	
-	$url = 'http://warlight.net/API/ValidateInviteToken.aspx?Token='.$player_id;
+	$url = 'https://www.warlight.net/API/ValidateInviteToken.aspx?Token='.$player_id;
 	$arr = array(
 			'Email' 		=> $email,
 			'APIToken' 		=> $apitoken
@@ -35,7 +35,7 @@ function API_DeleteLobbyGame($game_id) {
 	global $email;
 	global $apitoken;
 	
-	$url = 'http://warlight.net/API/DeleteLobbyGame';
+	$url = 'https://www.warlight.net/API/DeleteLobbyGame';
 	$arr = array(
 			'Email' 		=> $email,
 			'APIToken' 		=> $apitoken,
@@ -59,7 +59,7 @@ function API_CreateGame($templateID, $gameName, $personalMessage, $players) {
 			'players'		=> $players
 			);
 	$jsonString = json_encode($arr);
-	$url = 'https://warlight.net/API/CreateGame'; 
+	$url = 'https://www.warlight.net/API/CreateGame'; 
 	$result = do_post_request($url, $jsonString);
 	return json_decode($result, true);				
 }
