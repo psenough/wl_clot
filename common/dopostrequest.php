@@ -29,6 +29,7 @@ function do_post_request2($url, $data) {
 		'content' => $data
 	  )
 	);
+	var_dump($opts);
 	$context = stream_context_create($opts);
 	$result = file_get_contents($url, false, $context);
 	return $result;

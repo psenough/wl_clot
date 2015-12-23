@@ -31,7 +31,8 @@ $resultjson = API_CreateGame(
 					$players
 					);
 
-if (array_key_exists('error',$resultjson)) {
+var_dump($resultjson);
+/*if (array_key_exists('error',$resultjson)) {
 	//echo 'error creating game with template '.$templateID.' '.$gameName.' with players:<br>';
 	//var_dump($players);
 	echo $resultjson['error'];
@@ -39,6 +40,6 @@ if (array_key_exists('error',$resultjson)) {
 } else {
 	$gameid = $resultjson['gameID'];
 	echo 'done:'.$gameid;
-}
+}*/
 
 ?>

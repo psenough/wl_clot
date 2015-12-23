@@ -50,6 +50,7 @@ function API_CreateGame($templateID, $gameName, $personalMessage, $players) {
 	global $email;
 	global $apitoken;
 	
+	$url = 'https://www.warlight.net/API/CreateGame'; 
 	$arr = array(
 			'hostEmail' 	=> $email,
 			'hostAPIToken'	=> $apitoken,
@@ -58,9 +59,7 @@ function API_CreateGame($templateID, $gameName, $personalMessage, $players) {
 			'personalMessage' => $personalMessage,
 			'players'		=> $players
 			);
-	$jsonString = json_encode($arr);
-	$url = 'https://www.warlight.net/API/CreateGame'; 
-	$result = do_post_request2($url, $jsonString);
+	$result = do_post_request2($url, json_encode($arr));
 	return json_decode($result, true);				
 }
 
