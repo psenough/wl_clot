@@ -59,7 +59,7 @@ function API_CreateGame($templateID, $gameName, $personalMessage, $players) {
 			'personalMessage' => $personalMessage,
 			'players'		=> $players
 			);
-	$result = do_post_request2($url, json_encode($arr));
+	$result = do_post_request3($url, json_encode($arr));
 	return json_decode($result, true);				
 }
 
