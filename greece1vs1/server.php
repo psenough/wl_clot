@@ -146,8 +146,8 @@ if ($string) {
 
 		if ($_GET['create'] == 'false') {
 			// dont create new game
-		} else 
-		{
+		} else {
+			
 			// create new game
 			if ($openseat != -1) {
 		
