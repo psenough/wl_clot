@@ -175,6 +175,7 @@ if ($string) {
 				if (array_key_exists('error',$resultjson)) {
 					echo 'error creating game with template '.$templateID.' '.$gameName.' with players:<br>';
 					var_dump($players);
+					echo $resultjson['error'];
 					die;
 				} else {
 					$gameid = $resultjson['gameID'];
