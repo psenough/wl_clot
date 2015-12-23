@@ -49,6 +49,8 @@ function do_post_request3($url, $data) {
 	//curl_setopt($ch,CURLOPT_URL, $url);
 	//curl_setopt($ch,CURLOPT_POST, count($data));
 	//curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);                                                                  
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
@@ -57,6 +59,7 @@ function do_post_request3($url, $data) {
 		'Content-Length: ' . strlen($data))                                                                       
 	);    
 
+	echo $data;
 	//execute post
 	$result = curl_exec($ch);
 
