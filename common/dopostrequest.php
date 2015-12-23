@@ -36,7 +36,7 @@ function do_post_request2($url, $data) {
 }
 
 function do_post_request3($url, $data) {
-	$fields_string = http_build_query($data);
+	//$fields_string = http_build_query($data);
 
 	//url-ify the data for the POST
 	//foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
@@ -46,9 +46,16 @@ function do_post_request3($url, $data) {
 	$ch = curl_init();
 
 	//set the url, number of POST vars, POST data
-	curl_setopt($ch,CURLOPT_URL, $url);
-	curl_setopt($ch,CURLOPT_POST, count($data));
-	curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+	//curl_setopt($ch,CURLOPT_URL, $url);
+	//curl_setopt($ch,CURLOPT_POST, count($data));
+	//curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);                                                                  
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
+	curl_setopt($ch, CURLOPT_HTTPHEADER, array(                                                                          
+		'Content-Type: application/json',                                                                                
+		'Content-Length: ' . strlen($data))                                                                       
+	);    
 
 	//execute post
 	$result = curl_exec($ch);
