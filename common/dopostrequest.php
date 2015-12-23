@@ -20,5 +20,18 @@ function do_post_request($url, $data, $optional_headers = null)
   }
   return $response;
 }
- 
+
+function do_post_request2($url, $data) {
+	$opts = array(
+	  'http' => array(
+		'method'  => 'POST',
+		'header'  => 'Content-type: application/x-www-form-urlencoded',
+		'content' => $data
+	  )
+	);
+	$context = stream_context_create($opts);
+	$result = file_get_contents($url, false, $context);
+	return $result;
+}
+
 ?>
