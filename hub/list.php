@@ -6,6 +6,7 @@
 require('simple_html_dom.php');
 require('../common/savejsonbackup.php');
 
+header('Content-Type: application/json');
 
 date_default_timezone_set('UTC');
 $now = new DateTime("now");
