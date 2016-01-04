@@ -34,7 +34,7 @@ if ($string) {
 
 
 $clots = [
-	[ 	
+	/*[ 	
 		"url" => "http://real-time-ladder.appspot.com/lot/5649391675244544",
 		"type" => "realtime",
 		"url_type" => "fizzer_example"
@@ -48,7 +48,7 @@ $clots = [
 		"url" => "http://multi-day-ladder.appspot.com/lot/5629499534213120",
 		"type" => "multiday",
 		"url_type" => "fizzer_example"
-	],
+	],*/
 	[
 		"url" => "http://warladder.net",
 		"type" => "multiday",
