@@ -1,4 +1,4 @@
-
+<?php
 
 header('Content-Type: application/json');
 
@@ -88,3 +88,5 @@ foreach ($clots as $clot) {
 
 $json['ladders'] = $output;
 $json['datetime'] = $now->format('Y/m/d H:i:s');
+
+?>
