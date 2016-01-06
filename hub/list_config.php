@@ -1,18 +1,14 @@
-<?php
 
-//error_reporting(E_ALL);
-//ini_set('display_errors', 1);
+
+header('Content-Type: application/json');
 
 require('simple_html_dom.php');
 require('../common/savejsonbackup.php');
-
-header('Content-Type: application/json');
 
 date_default_timezone_set('UTC');
 $now = new DateTime("now");
 //echo 'now: '.$now->format('Y/m/d H:i:s').'<br>';
 
-$cachefilename = 'cache.json';
 $string = file_get_contents($cachefilename);
 if ($string) {
 	//echo $string;
@@ -92,11 +88,3 @@ foreach ($clots as $clot) {
 
 $json['ladders'] = $output;
 $json['datetime'] = $now->format('Y/m/d H:i:s');
-
-$myoutput = json_encode($json);
-
-file_put_contents($cachefilename, $myoutput);
-
-echo $myoutput;
-
-?>
