@@ -34,13 +34,13 @@ $clots = [
 		"url" => "http://real-time-ladder.appspot.com/lot/5649391675244544",
 		"type" => "realtime",
 		"url_type" => "motd_template"
-	],*/
+	],
 	[ 	
 		"url" => "http://wl1v1-clot.appspot.com/lot/5629499534213120",
 		"type" => "multiday",
 		"url_type" => "motd_template"
 	],
-	/*[ 
+	[ 
 		"url" => "http://multi-day-ladder.appspot.com/lot/5629499534213120",
 		"type" => "multiday",
 		"url_type" => "motd_template"
