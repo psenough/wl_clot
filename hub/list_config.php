@@ -92,7 +92,7 @@ $leagues = [
 	[ 	
 		"url" => "https://www.warlight.net/Forum/166818-clan-league-8-links",
 		"name" => "Clan League 8",
-		"players" => "~260"
+		"players" => "~300"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/164080-manager-league-season-2",
