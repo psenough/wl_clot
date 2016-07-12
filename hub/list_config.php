@@ -115,19 +115,19 @@ $leagues = [
 		"players" => "~50"
 	],
 	[ 	
+		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
+		"name" => "Multiattacker's League IV",
+		"players" => "~40"
+	],
+	[
 		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
 		"name" => "Warlight World Champions League",
 		"players" => "36"
 	],
-	[ 	
+	[
 		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
 		"name" => "RP Clan League 2",
 		"players" => "~30"
-	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
-		"name" => "Multiattacker's League IV",
-		"players" => "~16"
 	]	
 ];
 
