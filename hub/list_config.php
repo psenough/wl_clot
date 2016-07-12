@@ -44,12 +44,12 @@ $clots = [
 		"url" => "http://multi-day-ladder.appspot.com/lot/5629499534213120",
 		"type" => "multiday",
 		"url_type" => "motd_template"
-	],*/
+	],
 	[
 		"url" => "http://warladder.net",
 		"type" => "multiday",
 		"url_type" => "dutch"
-	]
+	]*/
 ];
 		
 $output = [];
@@ -87,6 +87,59 @@ foreach ($clots as $clot) {
 //var_dump($output);
 
 $json['ladders'] = $output;
+
+$leagues = [
+	[ 	
+		"url" => "https://www.warlight.net/Forum/166818-clan-league-8-links",
+		"name" => "Clan League 8",
+		"players" => "150"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/164080-manager-league-season-2",
+		"name" => "Manager League 2",
+		"players" => "150"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/147689-wsow-season-3-rules-call-participants?Offset=0",
+		"name" => "World Series of Warlight 4",
+		"players" => "100"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/149352-promotionrelegation-league-season-19",
+		"name" => "Promotion/Relegation League 19",
+		"players" => "50"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
+		"name" => "AWP World Tour",
+		"players" => "50"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
+		"name" => "Warlight World Champions League",
+		"players" => "32"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
+		"name" => "RP Clan League 2",
+		"players" => "30"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
+		"name" => "Multiattacker's League IV",
+		"players" => "16"
+	]	
+];
+
+$i = 0;
+foreach ($leagues as $league) {
+	$output2[$i] = [];
+	$output2[$i]['url'] = $league["url"];
+	$output2[$i]['name'] = $league["name"];
+	$i++;
+}
+
+$json['leagues'] = $output2;
 $json['datetime'] = $now->format('Y/m/d H:i:s');
 
 ?>
