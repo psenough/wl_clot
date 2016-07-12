@@ -136,6 +136,7 @@ foreach ($leagues as $league) {
 	$output2[$i] = [];
 	$output2[$i]['url'] = $league["url"];
 	$output2[$i]['name'] = $league["name"];
+	$output2[$i]['players'] = $league["players"];
 	$i++;
 }
 
