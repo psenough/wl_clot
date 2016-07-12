@@ -92,42 +92,42 @@ $leagues = [
 	[ 	
 		"url" => "https://www.warlight.net/Forum/166818-clan-league-8-links",
 		"name" => "Clan League 8",
-		"players" => "150"
+		"players" => "~150"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/164080-manager-league-season-2",
 		"name" => "Manager League 2",
-		"players" => "150"
-	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/147689-wsow-season-3-rules-call-participants?Offset=0",
-		"name" => "World Series of Warlight 4",
-		"players" => "100"
-	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/149352-promotionrelegation-league-season-19",
-		"name" => "Promotion/Relegation League 19",
-		"players" => "50"
+		"players" => "~150"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
 		"name" => "AWP World Tour",
-		"players" => "50"
+		"players" => "~128"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/147689-wsow-season-3-rules-call-participants?Offset=0",
+		"name" => "World Series of Warlight 4",
+		"players" => "~100"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/149352-promotionrelegation-league-season-19",
+		"name" => "Promotion/Relegation League 19",
+		"players" => "~50"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
 		"name" => "Warlight World Champions League",
-		"players" => "32"
+		"players" => "36"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
 		"name" => "RP Clan League 2",
-		"players" => "30"
+		"players" => "~30"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
 		"name" => "Multiattacker's League IV",
-		"players" => "16"
+		"players" => "~16"
 	]	
 ];
 
