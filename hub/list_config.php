@@ -106,12 +106,17 @@ $leagues = [
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/147689-wsow-season-3-rules-call-participants?Offset=0",
-		"name" => "World Series of Warlight 4",
+		"name" => "World Series of Warlight 3",
 		"players" => "~100"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/152771-small-earth-promotionrelegation-league-season-6",
 		"name" => "Small Earth Promotion/Relegation League 6",
+		"players" => "~80"
+	],
+	[
+		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
+		"name" => "RP Clan League 2",
 		"players" => "~80"
 	],
 	[ 	
@@ -128,12 +133,7 @@ $leagues = [
 		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
 		"name" => "Warlight World Champions League",
 		"players" => "36"
-	],
-	[
-		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
-		"name" => "RP Clan League 2",
-		"players" => "~30"
-	]	
+	]
 ];
 
 $i = 0;
