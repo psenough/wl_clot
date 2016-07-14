@@ -105,7 +105,7 @@ $leagues = [
 		"players" => "~128"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/147689-wsow-season-3-rules-call-participants?Offset=0",
+		"url" => "https://www.warlight.net/Forum/166666-world-series-warlight-wsow-update",
 		"name" => "World Series of Warlight 3",
 		"players" => "~100"
 	],
