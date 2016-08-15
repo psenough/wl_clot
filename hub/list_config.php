@@ -110,7 +110,7 @@ $leagues = [
 		"players" => "~100"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/149352-promotionrelegation-league-season-19",
+		"url" => "https://www.warlight.net/Forum/173737-promotionrelegation-league-season-20",
 		"name" => "Promotion/Relegation League 20",
 		"players" => "~90"
 	],
