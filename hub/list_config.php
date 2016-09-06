@@ -94,11 +94,11 @@ $leagues = [
 		"name" => "Clan League 8",
 		"players" => "~300"
 	],
-	[ 	
+	/*[ 	
 		"url" => "https://www.warlight.net/Forum/164080-manager-league-season-2",
 		"name" => "Manager League 2",
 		"players" => "~150"
-	],
+	],*/
 	[ 	
 		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
 		"name" => "AWP World Tour",
