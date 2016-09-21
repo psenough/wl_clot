@@ -115,14 +115,19 @@ $leagues = [
 		"players" => "~90"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/152771-small-earth-promotionrelegation-league-season-6",
-		"name" => "Small Earth Promotion/Relegation League 6",
+		"url" => "https://www.warlight.net/Forum/175379-small-earth-promotionrelegation-league-season-7",
+		"name" => "Small Earth Promotion/Relegation League 7",
 		"players" => "~80"
 	],
 	[
 		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
 		"name" => "RP Clan League 2",
 		"players" => "~80"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/185192-captains-league-signups",
+		"name" => "Captain's League",
+		"players" => "~40"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
