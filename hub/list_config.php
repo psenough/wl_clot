@@ -134,6 +134,11 @@ $leagues = [
 		"name" => "RP Clan League 2",
 		"players" => "~80"
 	],
+	[
+		"url" => "http://md-ladder.cloudapp.net/",
+		"name" => "MotD's Multi-Day Ladder CLOT",
+		"players" => "~50"
+	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/185192-captains-league-signups",
 		"name" => "Captain's League",
