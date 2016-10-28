@@ -30,11 +30,11 @@ if ($string) {
 
 
 $clots = [
-	/*[ 	
+	[ 	
 		"url" => "http://real-time-ladder.appspot.com/lot/5649391675244544",
 		"type" => "realtime",
 		"url_type" => "motd_template"
-	],
+	]/*,
 	[ 	
 		"url" => "http://wl1v1-clot.appspot.com/lot/5629499534213120",
 		"type" => "multiday",
@@ -134,11 +134,11 @@ $leagues = [
 		"name" => "Captain's League",
 		"players" => "~40"
 	],
-	[ 	
+	/*[ 	
 		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
 		"name" => "Multiattacker's League IV",
 		"players" => "~40"
-	],
+	],*/
 	[
 		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
 		"name" => "Warlight World Champions League",
