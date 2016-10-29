@@ -49,12 +49,12 @@ $clots = [
 		"url" => "http://warladder.net",
 		"type" => "multiday",
 		"url_type" => "dutch"
-	]*/
+	],
 	[
 		"url" => "http://md-ladder.cloudapp.net/",
 		"type" => "multiday",
 		"url_type" => "motd_template"
-	]
+	]*/
 ];
 		
 $output = [];
@@ -71,6 +71,7 @@ foreach ($clots as $clot) {
 			case "motd_template":
 				//TODO: extract template info
 				$output[$i]['name'] = $html->find("h1", 0)->plaintext;
+				//TODO: this players count is total number of players, not the active ones, the active ones are listed at the end of a string on the main page (motd recent change)
 				$output[$i]['players'] = count($html->find('.table',1)->find('tr'))-1;
 				$output[$i]['type'] = $clot["type"];
 			break;
