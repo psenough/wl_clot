@@ -116,30 +116,30 @@ $leagues = [
 		"players" => "~100"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/188119-ligue-francophone-saison-26",
-		"name" => "Ligue Francophone 26",
-		"players" => "~100"
-	],
-	[ 	
 		"url" => "https://www.warlight.net/Forum/173737-promotionrelegation-league-season-20",
 		"name" => "Promotion/Relegation League 20",
 		"players" => "~90"
-	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/175379-small-earth-promotionrelegation-league-season-7",
-		"name" => "Small Earth Promotion/Relegation League 7",
-		"players" => "~80"
-	],
-	[
-		"url" => "https://www.warlight.net/Forum/146128-rp-clan-league-2-official-thread",
-		"name" => "RP Clan League 2",
-		"players" => "~80"
 	],
 	[
 		"url" => "http://md-ladder.cloudapp.net/",
 		"name" => "MotD's Multi-Day Ladder CLOT",
 		"players" => "~75"
-	],		
+	],
+	[
+		"url" => "https://www.warlight.net/Forum/175474-rp-clan-league-3-preparation-thread",
+		"name" => "RP Clan League 3",
+		"players" => "~75"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/175379-small-earth-promotionrelegation-league-season-7",
+		"name" => "Small Earth Promotion/Relegation League 7",
+		"players" => "~70"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/188119-ligue-francophone-saison-26",
+		"name" => "Ligue Francophone 26",
+		"players" => "~40"
+	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/185192-captains-league-signups",
 		"name" => "Captain's League",
