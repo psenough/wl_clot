@@ -135,6 +135,11 @@ $leagues = [
 		"name" => "Small Earth Promotion/Relegation League 7",
 		"players" => "~70"
 	],
+		[
+		"url" => "https://www.warlight.net/Forum/219227-warlight-euro-cup-revived",
+		"name" => "Euro Cup",
+		"players" => "~50"
+	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/188119-ligue-francophone-saison-26",
 		"name" => "Ligue Francophone 26",
@@ -158,7 +163,7 @@ $leagues = [
 	[
 		"url" => "http://noliterre.boards.net/",
 		"name" => "World of Noliterre",
-		"players" => "~12"
+		"players" => "~25"
 	]
 ];
 
