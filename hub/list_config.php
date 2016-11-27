@@ -122,7 +122,7 @@ $leagues = [
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/220289-small-earth-promotionrelegation-league-season-8",
-		"name" => "Small Earth Promotion/Relegation League 7",
+		"name" => "Small Earth Promotion/Relegation League 8",
 		"players" => "~90"
 	],
 	[
