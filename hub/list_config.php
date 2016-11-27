@@ -120,22 +120,22 @@ $leagues = [
 		"name" => "Promotion/Relegation League 20",
 		"players" => "~90"
 	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/220289-small-earth-promotionrelegation-league-season-8",
+		"name" => "Small Earth Promotion/Relegation League 7",
+		"players" => "~90"
+	],
 	[
 		"url" => "http://md-ladder.cloudapp.net/",
 		"name" => "MotD's Multi-Day Ladder CLOT",
-		"players" => "~75"
+		"players" => "~78"
 	],
 	[
 		"url" => "https://www.warlight.net/Forum/175474-rp-clan-league-3-preparation-thread",
 		"name" => "RP Clan League 3",
 		"players" => "~75"
 	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/175379-small-earth-promotionrelegation-league-season-7",
-		"name" => "Small Earth Promotion/Relegation League 7",
-		"players" => "~70"
-	],
-		[
+	[
 		"url" => "https://www.warlight.net/Forum/219227-warlight-euro-cup-revived",
 		"name" => "Euro Cup",
 		"players" => "~50"
