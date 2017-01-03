@@ -131,7 +131,7 @@ $leagues = [
 		"players" => "~78"
 	],
 	[
-		"url" => "https://www.warlight.net/Forum/175474-rp-clan-league-3-preparation-thread",
+		"url" => "https://www.warlight.net/Forum/223576-rpcl3official-thread",
 		"name" => "RP Clan League 3",
 		"players" => "~75"
 	],
