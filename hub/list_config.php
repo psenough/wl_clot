@@ -136,9 +136,9 @@ $leagues = [
 		"players" => "~75"
 	],
 	[
-		"url" => "https://www.warlight.net/Forum/219227-warlight-euro-cup-revived",
-		"name" => "Euro Cup",
-		"players" => "~50"
+		"url" => "https://www.warlight.net/Forum/240538-euro-cup-ii",
+		"name" => "Euro Cup 2",
+		"players" => "~70"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/188119-ligue-francophone-saison-26",
