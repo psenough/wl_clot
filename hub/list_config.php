@@ -141,8 +141,8 @@ $leagues = [
 		"players" => "~70"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/188119-ligue-francophone-saison-26",
-		"name" => "Ligue Francophone 26",
+		"url" => "https://www.warlight.net/Forum/241616-ligue-france-francophone-nouvelle-saison-",
+		"name" => "Ligue Francophone 27",
 		"players" => "~40"
 	],
 	[ 	
