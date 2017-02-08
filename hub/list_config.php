@@ -96,7 +96,7 @@ $json['ladders'] = $output;
 
 $leagues = [
 	[ 	
-		"url" => "https://www.warlight.net/Forum/166818-clan-league-8-links",
+		"url" => "https://www.warlight.net/Forum/242841-clan-league-9-kick",
 		"name" => "Clan League 8",
 		"players" => "~300"
 	],
