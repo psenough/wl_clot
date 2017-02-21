@@ -103,7 +103,7 @@ $leagues = [
 	[ 	
 		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
 		"name" => "AWP World Tour",
-		"players" => "~512"
+		"players" => "~150"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/242841-clan-league-9-kick",
