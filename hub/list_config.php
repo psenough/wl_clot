@@ -95,20 +95,20 @@ foreach ($clots as $clot) {
 $json['ladders'] = $output;
 
 $leagues = [
-	[ 	
-		"url" => "https://www.warlight.net/Forum/242841-clan-league-9-kick",
-		"name" => "Clan League 8",
-		"players" => "~300"
+	[
+		"url" => "http://md-ladder.cloudapp.net/",
+		"name" => "MotD's Multi-Day Ladder CLOT",
+		"players" => "~80"
 	],
-	/*[ 	
-		"url" => "https://www.warlight.net/Forum/164080-manager-league-season-2",
-		"name" => "Manager League 2",
-		"players" => "~150"
-	],*/
 	[ 	
 		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
 		"name" => "AWP World Tour",
-		"players" => "~128"
+		"players" => "~512"
+	],
+	[ 	
+		"url" => "https://www.warlight.net/Forum/242841-clan-league-9-kick",
+		"name" => "Clan League 9",
+		"players" => "~300"
 	],
 	[ 	
 		"url" => "https://www.warlight.net/Forum/166666-world-series-warlight-wsow-update",
@@ -116,19 +116,14 @@ $leagues = [
 		"players" => "~100"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/173737-promotionrelegation-league-season-20",
-		"name" => "Promotion/Relegation League 20",
+		"url" => "https://www.warlight.net/Forum/242100-promotionrelegation-league-season-21",
+		"name" => "Promotion/Relegation League 21",
 		"players" => "~90"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/220289-small-earth-promotionrelegation-league-season-8",
-		"name" => "Small Earth Promotion/Relegation League 8",
+		"url" => "https://www.warlight.net/Forum/241594-small-earth-promotionrelegation-league-season-9",
+		"name" => "Small Earth Promotion/Relegation League 9",
 		"players" => "~90"
-	],
-	[
-		"url" => "http://md-ladder.cloudapp.net/",
-		"name" => "MotD's Multi-Day Ladder CLOT",
-		"players" => "~78"
 	],
 	[
 		"url" => "https://www.warlight.net/Forum/223576-rpcl3official-thread",
@@ -150,11 +145,6 @@ $leagues = [
 		"name" => "Captain's League",
 		"players" => "~40"
 	],
-	/*[ 	
-		"url" => "https://www.warlight.net/Forum/136968-multiattackers-league-season-iv?Offset=0",
-		"name" => "Multiattacker's League IV",
-		"players" => "~40"
-	],*/
 	[
 		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
 		"name" => "Warlight World Champions League",
