@@ -110,11 +110,11 @@ $leagues = [
 		"name" => "Clan League 9",
 		"players" => "~300"
 	],
-	[ 	
+	/*[ 	
 		"url" => "https://www.warlight.net/Forum/166666-world-series-warlight-wsow-update",
 		"name" => "World Series of Warlight 3",
 		"players" => "~100"
-	],
+	],*/
 	[ 	
 		"url" => "https://www.warlight.net/Forum/242100-promotionrelegation-league-season-21",
 		"name" => "Promotion/Relegation League 21",
@@ -141,15 +141,15 @@ $leagues = [
 		"players" => "~40"
 	],
 	[ 	
-		"url" => "https://www.warlight.net/Forum/185192-captains-league-signups",
-		"name" => "Captain's League",
+		"url" => "https://www.warlight.net/Forum/242633-captains-league-2nd-season-preparation-thread",
+		"name" => "Captain's League 2",
 		"players" => "~40"
 	],
-	[
+	/*[
 		"url" => "https://www.warlight.net/Forum/151215-warlight-world-champions-league-wwcl",
 		"name" => "Warlight World Champions League",
 		"players" => "36"
-	],
+	],*/
 	[
 		"url" => "http://noliterre.boards.net/",
 		"name" => "World of Noliterre",
