@@ -96,36 +96,36 @@ $json['ladders'] = $output;
 
 $leagues = [
 	[
-		"url" => "http://md-ladder.cloudapp.net/",
-		"name" => "MotD's Multi-Day Ladder CLOT",
-		"players" => "~80"
+		"url" => "https://www.warlight.net/Forum/242841-clan-league-9-kick",
+		"name" => "Clan League 9",
+		"players" => "~300"
 	],
-	[ 	
+	[
 		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
 		"name" => "AWP World Tour",
 		"players" => "~150"
 	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/242841-clan-league-9-kick",
-		"name" => "Clan League 9",
-		"players" => "~300"
+	[
+		"url" => "http://md-ladder.cloudapp.net/",
+		"name" => "MotD's Multi-Day Ladder CLOT",
+		"players" => "~100"
 	],
 	/*[ 	
 		"url" => "https://www.warlight.net/Forum/166666-world-series-warlight-wsow-update",
 		"name" => "World Series of Warlight 3",
 		"players" => "~100"
 	],*/
-	[ 	
+	[
 		"url" => "https://www.warlight.net/Forum/242100-promotionrelegation-league-season-21",
 		"name" => "Promotion/Relegation League 21",
 		"players" => "~90"
 	],
-	[ 	
-		"url" => "https://www.warlight.net/Forum/241594-small-earth-promotionrelegation-league-season-9",
-		"name" => "Small Earth Promotion/Relegation League 9",
-		"players" => "~90"
-	],
 	[
+		"url" => "https://www.warlight.net/Forum/251637-small-earth-promotionrelegation-league-season-10",
+		"name" => "Small Earth Promotion/Relegation League 10",
+		"players" => "~70"
+	],
+/*	[
 		"url" => "https://www.warlight.net/Forum/223576-rpcl3official-thread",
 		"name" => "RP Clan League 3",
 		"players" => "~75"
@@ -139,7 +139,7 @@ $leagues = [
 		"url" => "https://www.warlight.net/Forum/241616-ligue-france-francophone-nouvelle-saison-",
 		"name" => "Ligue Francophone 27",
 		"players" => "~40"
-	],
+	],*/
 	[ 	
 		"url" => "https://www.warlight.net/Forum/242633-captains-league-2nd-season-preparation-thread",
 		"name" => "Captain's League 2",
@@ -153,7 +153,7 @@ $leagues = [
 	[
 		"url" => "http://noliterre.boards.net/",
 		"name" => "World of Noliterre",
-		"players" => "~25"
+		"players" => "~20"
 	]
 ];
 
