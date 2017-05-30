@@ -101,7 +101,7 @@ $leagues = [
 		"players" => "~300"
 	],
 	[
-		"url" => "https://www.warlight.net/Forum/159429-awp-world-tour-magazine",
+		"url" => "https://www.warlight.net/Forum/262655-awp-world-tour-magazine",
 		"name" => "AWP World Tour",
 		"players" => "~150"
 	],
