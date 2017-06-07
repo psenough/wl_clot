@@ -108,7 +108,7 @@ $leagues = [
 	[
 		"url" => "http://md-ladder.cloudapp.net/",
 		"name" => "MotD's Multi-Day Ladder CLOT",
-		"players" => "~100"
+		"players" => "~90"
 	],
 	/*[ 	
 		"url" => "https://www.warlight.net/Forum/166666-world-series-warlight-wsow-update",
@@ -121,8 +121,8 @@ $leagues = [
 		"players" => "~90"
 	],
 	[
-		"url" => "https://www.warlight.net/Forum/251637-small-earth-promotionrelegation-league-season-10",
-		"name" => "Small Earth Promotion/Relegation League 10",
+		"url" => "https://www.warlight.net/Forum/261356-small-earth-promotionrelegation-league-season-11",
+		"name" => "Small Earth Promotion/Relegation League 11",
 		"players" => "~70"
 	],
 /*	[
@@ -141,8 +141,8 @@ $leagues = [
 		"players" => "~40"
 	],*/
 	[ 	
-		"url" => "https://www.warlight.net/Forum/242633-captains-league-2nd-season-preparation-thread",
-		"name" => "Captain's League 2",
+		"url" => "https://www.warlight.net/Forum/263510-captains-league-season-3-revamped",
+		"name" => "Captain's League 3",
 		"players" => "~40"
 	],
 	/*[
