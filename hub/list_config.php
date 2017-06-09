@@ -106,6 +106,11 @@ $leagues = [
 		"players" => "~150"
 	],
 	[
+		"url" => "https://www.warlight.net/Forum/265225-promotionrelegation-league-season-22",
+		"name" => "Promotion/Relegation League 22",
+		"players" => "~126"
+	],
+	[
 		"url" => "http://md-ladder.cloudapp.net/",
 		"name" => "MotD's Multi-Day Ladder CLOT",
 		"players" => "~90"
@@ -116,21 +121,16 @@ $leagues = [
 		"players" => "~100"
 	],*/
 	[
-		"url" => "https://www.warlight.net/Forum/242100-promotionrelegation-league-season-21",
-		"name" => "Promotion/Relegation League 21",
-		"players" => "~90"
-	],
-	[
 		"url" => "https://www.warlight.net/Forum/261356-small-earth-promotionrelegation-league-season-11",
 		"name" => "Small Earth Promotion/Relegation League 11",
 		"players" => "~70"
 	],
-/*	[
-		"url" => "https://www.warlight.net/Forum/223576-rpcl3official-thread",
-		"name" => "RP Clan League 3",
-		"players" => "~75"
-	],
 	[
+		"url" => "https://www.warlight.net/Forum/265354-rpcl4-general-discussioninterest-thread",
+		"name" => "RP Clan League 4",
+		"players" => "~50"
+	],
+/*	[
 		"url" => "https://www.warlight.net/Forum/240538-euro-cup-ii",
 		"name" => "Euro Cup 2",
 		"players" => "~70"
