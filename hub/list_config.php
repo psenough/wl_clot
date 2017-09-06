@@ -154,6 +154,11 @@ $leagues = [
 		"url" => "http://noliterre.boards.net/",
 		"name" => "World of Noliterre",
 		"players" => "~20"
+	],
+	[
+		"url" => "https://www.warlight.net/Forum/274711-preussen-liga-saison-2",
+		"name" => "Preussen Liga 2",
+		"players" => "~16"
 	]
 ];
 
