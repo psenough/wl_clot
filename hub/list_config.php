@@ -121,8 +121,8 @@ $leagues = [
 		"players" => "~100"
 	],*/
 	[
-		"url" => "https://www.warlight.net/Forum/261356-small-earth-promotionrelegation-league-season-11",
-		"name" => "Small Earth Promotion/Relegation League 11",
+		"url" => "https://www.warlight.net/Forum/274562-small-earth-promotionrelegation-league-season-12",
+		"name" => "Small Earth Promotion/Relegation League 12",
 		"players" => "~70"
 	],
 	[
