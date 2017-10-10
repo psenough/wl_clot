@@ -106,8 +106,8 @@ $leagues = [
 		"players" => "~150"
 	],
 	[
-		"url" => "https://www.warlight.net/Forum/265225-promotionrelegation-league-season-22",
-		"name" => "Promotion/Relegation League 22",
+		"url" => "https://www.warlight.net/Forum/280775-promotionrelegation-league-season-23",
+		"name" => "Promotion/Relegation League 23",
 		"players" => "~126"
 	],
 	[
