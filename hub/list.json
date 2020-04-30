@@ -68,7 +68,7 @@
          "description":"Custom Multiday ladder developed by Deadman, challenge your resilience in a wide range of strategic templates against other players",
          "joinRequirements":{
             "mustBeInAClan":false,
-            "mustBeLevel":50
+            "mustBeLevel":54
          }
       },
       {
