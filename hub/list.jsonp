@@ -1,4 +1,4 @@
-({"success" : "1" , "data" : {"ladders":[],
+({"success" : "1" , "data" : {
    "leagues":[
       {
          "url":"https:\/\/www.warlight.net\/Forum\/387260-clan-league-12-official-thread",
@@ -85,7 +85,16 @@
          "joinRequirements":{
             "mustBeInAClan":false
          }
+      },
+      {
+         "url":"https:\/\/www.warlight.net\/Forum\/426875-usa-league",
+         "name":"USA League 1",
+         "players":"?",
+         "description":"A league for all American citizens and people who currently live in the United States.",
+         "joinRequirements":{
+            "mustBeInAClan":false
+         }
       }
    ],
-   "datetime":"2020\/04\/28 21:20:00"
+   "datetime":"2020\/06\/02 01:02:00"
 } })
