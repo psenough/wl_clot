@@ -92,6 +92,7 @@
          "players":"?",
          "description":"A league for all American citizens and people who currently live in the United States.",
          "joinRequirements":{
+            "mustBeLevel":51,
             "mustBeInAClan":false
          }
       }
