@@ -52,13 +52,12 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/389644-small-earth-promotionrelegation-league-season-17",
-         "name":"Small Earth Promotion\/Relegation League 17",
+         "url":"https:\/\/www.warlight.net\/Forum\/429368-small-earth-promotionrelegation-league-season-19",
+         "name":"Small Earth Promotion\/Relegation League 19",
          "players":"~90",
          "description":"Seasonal round robin tournaments on the Small Earth template",
          "joinRequirements":{
-            "mustBeInAClan":false,
-            "closedForReason": "Season 17 is over, contact organizers for news of Season 18 start"
+            "mustBeInAClan":false
          }
       },
       {
