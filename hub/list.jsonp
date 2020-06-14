@@ -52,13 +52,12 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/389644-small-earth-promotionrelegation-league-season-17",
-         "name":"Small Earth Promotion\/Relegation League 17",
+         "url":"https:\/\/www.warlight.net\/Forum\/429368-small-earth-promotionrelegation-league-season-19",
+         "name":"Small Earth Promotion\/Relegation League 19",
          "players":"~90",
          "description":"Seasonal round robin tournaments on the Small Earth template",
          "joinRequirements":{
-            "mustBeInAClan":false,
-            "closedForReason": "Season 17 is over, contact organizers for news of Season 18 start"
+            "mustBeInAClan":false
          }
       },
       {
@@ -89,7 +88,7 @@
       {
          "url":"https:\/\/www.warlight.net\/Forum\/426875-usa-league",
          "name":"USA League 1",
-         "players":"?",
+         "players":"~25",
          "description":"A league for all American citizens and people who currently live in the United States.",
          "joinRequirements":{
             "mustBeLevel":51,
@@ -97,5 +96,5 @@
          }
       }
    ],
-   "datetime":"2020\/06\/02 01:02:00"
+   "datetime":"2020\/06\/14 20:27:00"
 } })
