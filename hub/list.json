@@ -94,7 +94,17 @@
             "mustBeLevel":51,
             "mustBeInAClan":false
          }
+      },
+      {
+         "url":"https:\/\/www.warlight.net\/Forum\/429932-community-event-mankind-series",
+         "name":"Mankind Series",
+         "players":"~2",
+         "description":"Challenging scenarios from the dawn of mankind 350k years ago to current times.",
+         "joinRequirements":{
+            "mustBeLevel":10,
+            "mustBeInAClan":false
+         }
       }
    ],
-   "datetime":"2020\/06\/14 20:27:00"
+   "datetime":"2020\/06\/19 16:37:00"
 }
