@@ -71,12 +71,6 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/400821-new-clot-httpwztourneyherokuappcom",
-         "name":"-B's CLOT",
-         "players":"~50",
-         "description":"Different tournaments and leagues on a CLOT developed by -B!"
-      },
-      {
          "url":"https:\/\/www.warlight.net\/Forum\/413374-ligue-france-saison-33",
          "name":"Ligue France 33",
          "players":"~50",
@@ -96,6 +90,16 @@
          }
       },
       {
+         "url":"https:\/\/wzclot.eastus.cloudapp.azure.com\/leagues\/306\/",
+         "name":"Strat ME Ladder",
+         "players":"~30",
+         "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
+         "joinRequirements":{
+            "mustBeLevel":10,
+            "mustBeInAClan":false
+         }
+      },
+      {
          "url":"https:\/\/www.warlight.net\/Forum\/429932-community-event-mankind-series",
          "name":"Mankind Series",
          "players":"~20",
@@ -106,5 +110,5 @@
          }
       }
    ],
-   "datetime":"2020\/06\/26 16:37:00"
+   "datetime":"2020\/07\/05 23:44:00"
 } })
