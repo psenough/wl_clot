@@ -71,6 +71,16 @@
          }
       },
       {
+         "url":"https:\/\/wzclot.eastus.cloudapp.azure.com\/leagues\/306\/",
+         "name":"Strat ME Ladder",
+         "players":"~30",
+         "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
+         "joinRequirements":{
+            "mustBeLevel":41,
+            "mustBeInAClan":false
+         }
+      },
+      {
          "url":"https:\/\/www.warlight.net\/Forum\/413374-ligue-france-saison-33",
          "name":"Ligue France 33",
          "players":"~50",
@@ -86,16 +96,6 @@
          "description":"A league for all American citizens and people who currently live in the United States.",
          "joinRequirements":{
             "mustBeLevel":51,
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/wzclot.eastus.cloudapp.azure.com\/leagues\/306\/",
-         "name":"Strat ME Ladder",
-         "players":"~30",
-         "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
-         "joinRequirements":{
-            "mustBeLevel":41,
             "mustBeInAClan":false
          }
       },
