@@ -95,6 +95,7 @@
          "players":"~30",
          "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
          "joinRequirements":{
+            "mustBeLevel":41,
             "mustBeInAClan":false
          }
       },
@@ -109,5 +110,5 @@
          }
       }
    ],
-   "datetime":"2020\/07\/05 23:43:00"
+   "datetime":"2020\/07\/06 22:00:00"
 }
