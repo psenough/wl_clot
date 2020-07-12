@@ -108,7 +108,16 @@
             "mustBeLevel":10,
             "mustBeInAClan":false
          }
+      },
+      {
+         "url":"https:\/\/www.warlight.net\/Forum\/435101-fringe-league-rebooting",
+         "name":"Fringe League",
+         "players":"~0",
+         "description":"4v4 on England map",
+         "joinRequirements":{
+            "mustBeInAClan":false
+         }
       }
    ],
-   "datetime":"2020\/07\/06 22:00:00"
+   "datetime":"2020\/07\/12 22:00:00"
 }
