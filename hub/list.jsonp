@@ -100,6 +100,15 @@
          }
       },
       {
+         "url":"https:\/\/www.warlight.net\/Forum\/438557-cavemania-evolution-series",
+         "name":"Cavemania Evolution Series",
+         "players":"~20",
+         "description":"A ongoing series of linked custom scenarios with RPG Elements.",
+         "joinRequirements":{
+            "mustBeInAClan":false
+         }
+      },
+      {
          "url":"https:\/\/www.warlight.net\/Forum\/429932-community-event-mankind-series",
          "name":"Mankind Series",
          "players":"~20",
@@ -119,5 +128,5 @@
          }
       }
    ],
-   "datetime":"2020\/07\/12 22:00:00"
+   "datetime":"2020\/07\/27 02:00:00"
 } })
