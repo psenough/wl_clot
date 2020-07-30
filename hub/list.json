@@ -81,8 +81,8 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/413374-ligue-france-saison-33",
-         "name":"Ligue France 33",
+         "url":"https:\/\/www.warlight.net\/Forum\/439702-ligue-france",
+         "name":"Ligue France 34",
          "players":"~50",
          "description":"A competition among French speaking players",
          "joinRequirements":{
@@ -128,5 +128,5 @@
          }
       }
    ],
-   "datetime":"2020\/07\/27 02:00:00"
+   "datetime":"2020\/07\/30 21:50:00"
 }
