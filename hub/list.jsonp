@@ -71,12 +71,21 @@
          }
       },
       {
-         "url":"https:\/\/wzclot.eastus.cloudapp.azure.com\/leagues\/306\/",
-         "name":"Strat ME Ladder",
-         "players":"~30",
-         "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
+         "url":"https:\/\/www.warlight.net\/Forum\/429932-community-event-mankind-series",
+         "name":"Mankind Series",
+         "players":"~80",
+         "description":"Challenging scenarios from the dawn of mankind 350k years ago to current times.",
          "joinRequirements":{
-            "mustBeLevel":41,
+            "mustBeLevel":10,
+            "mustBeInAClan":false
+         }
+      },
+      {
+         "url":"https:\/\/www.warlight.net\/Forum\/449953-community-event-maps-series",
+         "name":"All Maps Series",
+         "players":"~64",
+         "description":"Hosting and playing all maps from oldest to newest. My personal goal is to rate every map.",
+         "joinRequirements":{
             "mustBeInAClan":false
          }
       },
@@ -86,6 +95,16 @@
          "players":"~50",
          "description":"A competition among French speaking players",
          "joinRequirements":{
+            "mustBeInAClan":false
+         }
+      },
+      {
+         "url":"https:\/\/wzclot.eastus.cloudapp.azure.com\/leagues\/306\/",
+         "name":"Strat ME Ladder",
+         "players":"~30",
+         "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
+         "joinRequirements":{
+            "mustBeLevel":41,
             "mustBeInAClan":false
          }
       },
@@ -100,42 +119,14 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/438557-cavemania-evolution-series",
-         "name":"Cavemania Evolution Series",
-         "players":"~20",
-         "description":"A ongoing series of linked custom scenarios with RPG Elements.",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/www.warlight.net\/Forum\/429932-community-event-mankind-series",
-         "name":"Mankind Series",
-         "players":"~20",
-         "description":"Challenging scenarios from the dawn of mankind 350k years ago to current times.",
-         "joinRequirements":{
-            "mustBeLevel":10,
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/www.warlight.net\/Forum\/435101-fringe-league-rebooting",
-         "name":"Fringe League",
-         "players":"~0",
-         "description":"4v4 on England map",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/www.warlight.net\/Forum\/449953-community-event-maps-series",
-         "name":"All Maps Series",
-         "players":"~0",
-         "description":"Hosting and playing all maps from oldest to newest. My personal goal is to rate every map.",
+         "url":"https:\/\/www.warlight.net\/Forum\/492847-czsk-pr-leaguee",
+         "name":"CZ/SK P/R League",
+         "players":"~25",
+         "description":"CZ/SK Promotion & Relegation League",
          "joinRequirements":{
             "mustBeInAClan":false
          }
       }
    ],
-   "datetime":"2020\/09\/15 21:50:00"
+   "datetime":"2020\/11\/09 20:40:00"
 } })
