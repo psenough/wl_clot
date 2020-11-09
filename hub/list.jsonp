@@ -63,7 +63,7 @@
       {
          "url":"http:\/\/md-ladder.cloudapp.net\/",
          "name":"Multi Template Ladder (MTL)",
-         "players":"~80",
+         "players":"~90",
          "description":"Challenge your resilience in a wide range of strategic templates against other players",
          "joinRequirements":{
             "mustBeInAClan":false,
