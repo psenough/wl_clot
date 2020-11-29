@@ -12,14 +12,13 @@
          }
       },
       {
-         "url":"http:\/\/www.warlight.net\/Forum\/386234-new-nations-cup-sign-up-team-now",
+         "url":"http:\/\/www.warlight.net\/Forum\/496682-nations-cup-2021-signups",
          "name":"New Nations Cup",
          "players":"~225",
          "description":"Play as a team to represent your nation!",
          "joinRequirements":{
             "mustBeInAClan":false,
-            "mustBeLevel":50,
-            "closedForReason": "Signups ended on October 12th, 2019"
+            "mustBeLevel":50
          }
       },
       {
@@ -128,5 +127,5 @@
          }
       }
    ],
-   "datetime":"2020\/11\/09 20:40:00"
+   "datetime":"2020\/11\/29 13:30:00"
 }
