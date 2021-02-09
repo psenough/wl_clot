@@ -1,14 +1,13 @@
 {
    "leagues":[
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/387260-clan-league-12-official-thread",
-         "name":"Clan League 12",
+         "url":"https:\/\/www.warlight.net\/Forum\/523621-clan-league-14-signup-announcements",
+         "name":"Clan League 14",
          "players":"~510",
          "description":"The Legendary Clan League!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":50,
-            "closedForReason": "Signups for Clan League 13 will likely begin in July 2020"
+            "mustBeLevel":50
          }
       },
       {
@@ -51,8 +50,8 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/429368-small-earth-promotionrelegation-league-season-19",
-         "name":"Small Earth Promotion\/Relegation League 19",
+         "url":"https:\/\/www.warlight.net\/Forum\/520438-small-earth-promotionrelegation-league-season-21",
+         "name":"Small Earth Promotion\/Relegation League 21",
          "players":"~90",
          "description":"Seasonal round robin tournaments on the Small Earth template",
          "joinRequirements":{
@@ -127,5 +126,5 @@
          }
       }
    ],
-   "datetime":"2021\/01\/20 21:21:00"
+   "datetime":"2021\/02\/09 21:50:00"
 }
