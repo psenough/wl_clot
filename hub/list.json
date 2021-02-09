@@ -3,7 +3,7 @@
       {
          "url":"https:\/\/www.warlight.net\/Forum\/523621-clan-league-14-signup-announcements",
          "name":"Clan League 14",
-         "players":"~510",
+         "players":"~350",
          "description":"The Legendary Clan League!",
          "joinRequirements":{
             "mustBeInAClan":true,
@@ -40,32 +40,22 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/368081-introducing-clan-cup",
-         "name":"Clan Cup",
-         "players":"~110",
-         "description":"Tournament to decide who is the best active clan right now",
+         "url":"http:\/\/md-ladder.cloudapp.net\/",
+         "name":"Multi Template Ladder (MTL)",
+         "players":"~120",
+         "description":"Challenge your resilience in a wide range of strategic templates against other players",
          "joinRequirements":{
-            "mustBeInAClan":true,
-            "mustBeLevel":50
+            "mustBeInAClan":false,
+            "mustBeLevel":54
          }
       },
       {
          "url":"https:\/\/www.warlight.net\/Forum\/520438-small-earth-promotionrelegation-league-season-21",
          "name":"Small Earth Promotion\/Relegation League 21",
-         "players":"~90",
+         "players":"~70",
          "description":"Seasonal round robin tournaments on the Small Earth template",
          "joinRequirements":{
             "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"http:\/\/md-ladder.cloudapp.net\/",
-         "name":"Multi Template Ladder (MTL)",
-         "players":"~80",
-         "description":"Challenge your resilience in a wide range of strategic templates against other players",
-         "joinRequirements":{
-            "mustBeInAClan":false,
-            "mustBeLevel":54
          }
       },
       {
