@@ -78,6 +78,15 @@
          }
       },
       {
+         "url":"https:\/\/www.warlight.net\/Forum\/566712-captains-league-season-4",
+         "name":"Captain's League 4",
+         "players":"~50",
+         "description": "The \"Captain's League\" is a very competitive WarZone event where teams work together and build strong bonds to overcome adversity and take a chance to win (or lose) it all!",
+         "joinRequirements":{
+            "mustBeInAClan":false
+         }
+      },
+      {
          "url":"https:\/\/discord.gg\/a5wK2QYe",
          "name":"Ligue France 36",
          "players":"~50",
@@ -116,5 +125,5 @@
          }
       }
    ],
-   "datetime":"2021\/04\/18 16:35:00"
+   "datetime":"2021\/08\/04 12:10:00"
 } })
