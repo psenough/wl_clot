@@ -1,7 +1,7 @@
 {
    "leagues":[
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/523621-clan-league-14-signup-announcements",
+         "url":"https:\/\/warzone.com\/Forum\/523621-clan-league-14-signup-announcements",
          "name":"Clan League 14",
          "players":"~350",
          "description":"The Legendary Clan League!",
@@ -11,7 +11,7 @@
          }
       },
       {
-         "url":"http:\/\/www.warlight.net\/Forum\/496682-nations-cup-2021-signups",
+         "url":"http:\/\/warzone.com\/Forum\/496682-nations-cup-2021-signups",
          "name":"Nations Cup 2021",
          "players":"~225",
          "description":"Play as a team to represent your nation!",
@@ -21,7 +21,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/262655-awp-world-tour-magazine",
+         "url":"https:\/\/warzone.com\/Forum\/262655-awp-world-tour-magazine",
          "name":"AWP World Tour",
          "players":"~150",
          "description":"Prove your worth on a series of pro level tournaments",
@@ -31,7 +31,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/544197-promotion-relegation-league-season-32",
+         "url":"https:\/\/warzone.com\/Forum\/544197-promotion-relegation-league-season-32",
          "name":"Promotion\/Relegation League 32",
          "players":"~126",
          "description":"A seasonal group of round-robin Warzone tournaments, always on the classic “strategic medium earth” map and settings with 0% weighted random luck",
@@ -50,7 +50,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/520438-small-earth-promotionrelegation-league-season-21",
+         "url":"https:\/\/warzone.com\/Forum\/520438-small-earth-promotionrelegation-league-season-21",
          "name":"Small Earth Promotion\/Relegation League 21",
          "players":"~70",
          "description":"Seasonal round robin tournaments on the Small Earth template",
@@ -59,7 +59,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/429932-community-event-mankind-series",
+         "url":"https:\/\/warzone.com\/Forum\/429932-community-event-mankind-series",
          "name":"Mankind Series",
          "players":"~80",
          "description":"Challenging scenarios from the dawn of mankind 350k years ago to current times.",
@@ -69,7 +69,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/449953-community-event-maps-series",
+         "url":"https:\/\/warzone.com\/Forum\/449953-community-event-maps-series",
          "name":"All Maps Series",
          "players":"~64",
          "description":"Hosting and playing all maps from oldest to newest. My personal goal is to rate every map.",
@@ -78,7 +78,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/566712-captains-league-season-4",
+         "url":"https:\/\/warzone.com\/Forum\/566712-captains-league-season-4",
          "name":"Captain's League 4",
          "players":"~50",
          "description": "The \"Captain's League\" is a very competitive WarZone event where teams work together and build strong bonds to overcome adversity and take a chance to win (or lose) it all!",
@@ -106,7 +106,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/426875-usa-league",
+         "url":"https:\/\/warzone.com\/Forum\/426875-usa-league",
          "name":"USA League 1",
          "players":"~25",
          "description":"A league for all American citizens and people who currently live in the United States.",
@@ -116,7 +116,7 @@
          }
       },
       {
-         "url":"https:\/\/www.warlight.net\/Forum\/492847-czsk-pr-leaguee",
+         "url":"https:\/\/warzone.com\/Forum\/492847-czsk-pr-leaguee",
          "name":"CZ/SK P/R League",
          "players":"~25",
          "description":"CZ/SK Promotion & Relegation League",
@@ -125,5 +125,5 @@
          }
       }
    ],
-   "datetime":"2021\/08\/04 12:10:00"
+   "datetime":"2021\/08\/10 00:01:00"
 }
