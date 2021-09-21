@@ -31,15 +31,6 @@
          }
       },
       {
-         "url":"https:\/\/warzone.com\/Forum\/576907-promotion-relegation-league-season-33",
-         "name":"Promotion\/Relegation League 33",
-         "players":"~126",
-         "description":"A seasonal group of round-robin Warzone tournaments, always on the classic “strategic medium earth” map and settings with 0% weighted random luck",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
          "url":"http:\/\/md-ladder.cloudapp.net\/",
          "name":"Multi Template Ladder (MTL)",
          "players":"~120",
@@ -47,6 +38,15 @@
          "joinRequirements":{
             "mustBeInAClan":false,
             "mustBeLevel":54
+         }
+      },
+      {
+         "url":"https:\/\/warzone.com\/Forum\/576907-promotion-relegation-league-season-33",
+         "name":"Promotion\/Relegation League 33",
+         "players":"~100",
+         "description":"A seasonal group of round-robin Warzone tournaments, always on the classic “strategic medium earth” map and settings with 0% weighted random luck",
+         "joinRequirements":{
+            "mustBeInAClan":false
          }
       },
       {
