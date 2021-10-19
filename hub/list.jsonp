@@ -59,16 +59,6 @@
          }
       },
       {
-         "url":"https:\/\/warzone.com\/Forum\/429932-community-event-mankind-series",
-         "name":"Mankind Series",
-         "players":"~80",
-         "description":"Challenging scenarios from the dawn of mankind 350k years ago to current times.",
-         "joinRequirements":{
-            "mustBeLevel":10,
-            "mustBeInAClan":false
-         }
-      },
-      {
          "url":"https:\/\/warzone.com\/Forum\/449953-community-event-maps-series",
          "name":"All Maps Series",
          "players":"~64",
@@ -125,5 +115,5 @@
          }
       }
    ],
-   "datetime":"2021\/09\/21 01:00:00"
+   "datetime":"2021\/10\/19 01:00:00"
 } })
