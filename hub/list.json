@@ -61,7 +61,7 @@
       {
          "url":"https:\/\/warzone.com\/Forum\/449953-community-event-maps-series",
          "name":"All Maps Series",
-         "players":"~64",
+         "players":"~120",
          "description":"Hosting and playing all maps from oldest to newest. My personal goal is to rate every map.",
          "joinRequirements":{
             "mustBeInAClan":false
@@ -115,5 +115,5 @@
          }
       }
    ],
-   "datetime":"2021\/10\/19 00:01:00"
+   "datetime":"2021\/11\/01 00:01:00"
 }
