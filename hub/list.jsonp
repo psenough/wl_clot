@@ -41,8 +41,8 @@
          }
       },
       {
-         "url":"https:\/\/warzone.com\/Forum\/628545-pr-league-season-35",
-         "name":"Promotion\/Relegation League 35",
+         "url":"https:\/\/warzone.com\/Forum\/654746-pr-league-season-36",
+         "name":"Promotion\/Relegation League 36",
          "players":"~100",
          "description":"A seasonal group of round-robin Warzone tournaments, always on the classic “strategic medium earth” map and settings with 0% weighted random luck",
          "joinRequirements":{
@@ -106,5 +106,5 @@
          }
       }
    ],
-   "datetime":"2022\/08\/31 00:00:00"
+   "datetime":"2022\/11\/07 00:00:00"
 } })
