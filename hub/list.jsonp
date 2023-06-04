@@ -104,7 +104,16 @@
          "joinRequirements":{
             "mustBeInAClan":false
          }
+      },
+      {
+         "url":"https:\/\/docs.google.com\/document\/d\/1Zi3sxx27kZJm_wJyqygMb3mTJqRdxferHPw6DvLfYXA\/edit?usp=sharing",
+         "name":"Undivided Combat League",
+         "players":"~16",
+         "description":"2v2 Swiss Format League",
+         "joinRequirements":{
+            "mustBeInAClan":false
+         }
       }
    ],
-   "datetime":"2022\/11\/07 00:00:00"
+   "datetime":"2023\/06\/05 00:00:00"
 } })
