@@ -1,9 +1,9 @@
 {
    "leagues":[
       {
-         "url":"https:\/\/warzone.com\/Forum\/642190-clan-league-16-signup-announcements",
-         "name":"Clan League 16",
-         "players":"~350",
+         "url":"https:\/\/warzone.com\/Forum\/713444-clan-league-17-signup-announcement",
+         "name":"Clan League 17",
+         "players":"~650",
          "description":"The Legendary Clan League!",
          "joinRequirements":{
             "mustBeInAClan":true,
@@ -116,5 +116,5 @@
          }
       }
    ],
-   "datetime":"2023\/06\/16 00:00:00"
+   "datetime":"2023\/10\/30 20:00:00"
 }
