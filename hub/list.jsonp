@@ -31,7 +31,7 @@
          }
       },
       {
-         "url":"http:\/\/md-ladder.cloudapp.net\/",
+         "url":"http:\/\/www.warlight-mtl.com\/",
          "name":"Multi Template Ladder (MTL)",
          "players":"~120",
          "description":"Challenge your resilience in a wide range of strategic templates against other players",
@@ -115,5 +115,5 @@
          }
       }
    ],
-   "datetime":"2023\/10\/30 20:00:00"
+   "datetime":"2023\/12\/30 20:00:00"
 } })
