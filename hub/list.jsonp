@@ -11,8 +11,8 @@
          }
       },
       {
-         "url":"http:\/\/warzone.com\/Forum\/496682-nations-cup-2021-signups",
-         "name":"Nations Cup 2021",
+         "url":"http:\/\/warzone.com\/Forum\/761567-nations-cup-2024",
+         "name":"Nations Cup 2024",
          "players":"~225",
          "description":"Play as a team to represent your nation!",
          "joinRequirements":{
@@ -41,79 +41,15 @@
          }
       },
       {
-         "url":"https:\/\/warzone.com\/Forum\/697466-pr-league-37",
-         "name":"Promotion\/Relegation League 37",
-         "players":"~100",
-         "description":"A seasonal group of round-robin Warzone tournaments, always on the classic “strategic medium earth” map and settings with 0% weighted random luck",
+         "url":"https:\/\/warzone.com\/Forum\/764879-manager-league-season-iii",
+         "name":"Manager League Season 3",
+         "players":"~80",
+         "description":"A league where players are auctioned off by Managers to compete in a round-robin tournament to determine the best team manager!",
          "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/warzone.com\/Forum\/520438-small-earth-promotionrelegation-league-season-21",
-         "name":"Small Earth Promotion\/Relegation League 21",
-         "players":"~70",
-         "description":"Seasonal round robin tournaments on the Small Earth template",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/warzone.com\/Forum\/566712-captains-league-season-4",
-         "name":"Captain's League 4",
-         "players":"~50",
-         "description": "The \"Captain's League\" is a very competitive WarZone event where teams work together and build strong bonds to overcome adversity and take a chance to win (or lose) it all!",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/discord.gg\/a5wK2QYe",
-         "name":"Ligue France 36",
-         "players":"~50",
-         "description":"A competition among French speaking players",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/wzclot.eastus.cloudapp.azure.com\/leagues\/306\/",
-         "name":"Strat ME Ladder",
-         "players":"~30",
-         "description":"Alternative to Fizzer's 1v1 MME ladder. We play on the much better template Strat ME with a much better rating system (Elo)..",
-         "joinRequirements":{
-            "mustBeLevel":41,
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/warzone.com\/Forum\/426875-usa-league",
-         "name":"USA League 1",
-         "players":"~25",
-         "description":"A league for all American citizens and people who currently live in the United States.",
-         "joinRequirements":{
-            "mustBeLevel":51,
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/warzone.com\/Forum\/492847-czsk-pr-leaguee",
-         "name":"CZ/SK P/R League",
-         "players":"~25",
-         "description":"CZ/SK Promotion & Relegation League",
-         "joinRequirements":{
-            "mustBeInAClan":false
-         }
-      },
-      {
-         "url":"https:\/\/docs.google.com\/document\/d\/1Zi3sxx27kZJm_wJyqygMb3mTJqRdxferHPw6DvLfYXA\/edit?usp=sharing",
-         "name":"Undivided Combat League",
-         "players":"~16",
-         "description":"2v2 Swiss Format League",
-         "joinRequirements":{
-            "mustBeInAClan":false
+            "mustBeInAClan":false,
+            "mustBeLevel":54
          }
       }
    ],
-   "datetime":"2023\/12\/30 20:00:00"
+   "datetime":"2024\/07\/13 14:00:00"
 } })
