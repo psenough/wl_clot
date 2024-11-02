@@ -41,15 +41,15 @@
          }
       },
       {
-         "url":"https:\/\/warzone.com\/Forum\/764879-manager-league-season-iii",
-         "name":"Manager League Season 3",
-         "players":"~80",
-         "description":"A league where players are auctioned off by Managers to compete in a round-robin tournament to determine the best team manager!",
+         "url":"https:\/\/www.warzone.com\/Forum\/780287-announcing-duo-open-league",
+         "name":"Duo Open League",
+         "players":"~64",
+         "description":"Play in a series of tournaments to test your 2v2 skills!",
          "joinRequirements":{
             "mustBeInAClan":false,
             "mustBeLevel":54
          }
       }
    ],
-   "datetime":"2024\/09\/16 14:00:00"
+   "datetime":"2024\/11\/02 14:00:00"
 } })
