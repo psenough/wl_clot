@@ -49,7 +49,17 @@
             "mustBeInAClan":false,
             "mustBeLevel":54
          }
+      },
+      {
+         "url":"https:\/\/www.warzone.com\/Forum\/810684-introducing-titled-tuesdays",
+         "name":"Titled Tuesdays",
+         "players":"~32",
+         "description":"Compete with the best in real-time and win the right to choose the next edition's template!",
+         "joinRequirements":{
+            "mustBeInAClan":false,
+            "mustBeLevel":1
+         }
       }
    ],
-   "datetime":"2024\/11\/02 14:00:00"
+   "datetime":"2025\/02\/06 14:00:00"
 } })
