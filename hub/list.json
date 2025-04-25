@@ -53,7 +53,7 @@
       {
          "url":"https:\/\/www.warzone.com\/Forum\/810684-introducing-titled-tuesdays",
          "name":"Titled Tuesdays",
-         "players":"~32",
+         "players":"~64",
          "description":"Compete with the best in real-time and win the right to choose the next edition's template!",
          "joinRequirements":{
             "mustBeInAClan":false,
@@ -61,5 +61,5 @@
          }
       }
    ],
-   "datetime":"2025\/02\/06 16:00:00"
+   "datetime":"2025\/04\/25 16:00:00"
 }
