@@ -12,7 +12,7 @@
       },
       {
          "url":"http:\/\/warzone.com\/Forum\/829511-nations-cup-2025",
-         "name":"Nations Cup 2024",
+         "name":"Nations Cup 2025",
          "players":"~225",
          "description":"Play as a team to represent your nation!",
          "joinRequirements":{
@@ -61,5 +61,5 @@
          }
       }
    ],
-   "datetime":"2025\/07\/06 16:00:00"
+   "datetime":"2025\/07\/06 17:00:00"
 } })
