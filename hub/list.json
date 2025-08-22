@@ -41,12 +41,12 @@
          }
       },
       {
-         "url":"https:\/\/www.warzone.com\/Forum\/806899-duo-open-league-2025-season-official-thread",
-         "name":"Duo Open League",
-         "players":"~64",
-         "description":"Play in a series of tournaments to test your 2v2 skills!",
+         "url":"https:\/\/www.warzone.com\/Forum\/839854-clan-cup-sign-up",
+         "name":"Clan Cup",
+         "players":"40+",
+         "description":"Clash between clans in a 1v1 tournament hosting a variety of templates!",
          "joinRequirements":{
-            "mustBeInAClan":false,
+            "mustBeInAClan":true,
             "mustBeLevel":54
          }
       },
@@ -61,5 +61,5 @@
          }
       }
    ],
-   "datetime":"2025\/07\/06 17:00:00"
+   "datetime":"2025\/08\/22 17:00:00"
 }
