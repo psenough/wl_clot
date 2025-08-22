@@ -47,7 +47,7 @@
          "description":"Clash between clans in a 1v1 tournament hosting a variety of templates!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":54
+            "mustBeLevel":1
          }
       },
       {
@@ -61,5 +61,5 @@
          }
       }
    ],
-   "datetime":"2025\/08\/22 17:00:00"
+   "datetime":"2025\/08\/22 18:00:00"
 } })
