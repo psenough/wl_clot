@@ -1,7 +1,7 @@
 ({"success" : "1" , "data" : {
    "leagues":[
       {
-         "url":"https:\/\/warzone.com\/Forum\/850594-clan-league-19-signups",
+         "url":"https:\/\/war.app\/Forum\/850594-clan-league-19-signups",
          "name":"Clan League 19",
          "players":"~650",
          "description":"The Legendary Clan League!",
@@ -11,8 +11,8 @@
          }
       },
       {
-         "url":"http:\/\/warzone.com\/Forum\/829511-nations-cup-2025",
-         "name":"Nations Cup 2025",
+         "url":"https:\/\/war.app\/Forum\/891630-nations-cup-2026",
+         "name":"Nations Cup 2026",
          "players":"~225",
          "description":"Play as a team to represent your nation!",
          "joinRequirements":{
@@ -21,7 +21,7 @@
          }
       },
       {
-         "url":"https:\/\/warzone.com\/Forum\/262655-awp-world-tour-magazine",
+         "url":"https:\/\/war.app\/Forum\/262655-awp-world-tour-magazine",
          "name":"AWP World Tour",
          "players":"~150",
          "description":"Prove your worth on a series of pro level tournaments",
@@ -31,7 +31,7 @@
          }
       },
       {
-         "url":"http:\/\/www.warlight-mtl.com\/",
+         "url":"https:\/\/www.warlight-mtl.com\/",
          "name":"Multi Template Ladder (MTL)",
          "players":"~120",
          "description":"Challenge your resilience in a wide range of strategic templates against other players",
@@ -41,15 +41,24 @@
          }
       },
       {
-         "url":"https:\/\/www.warzone.com\/Forum\/839854-clan-cup-sign-up",
+         "url":"https:\/\/www.war.app\/Forum\/888962-clan-cup-ii-2026",
          "name":"Clan Cup",
-         "players":"40+",
+         "players":"115",
          "description":"Clash between clans in a 1v1 tournament hosting a variety of templates!",
          "joinRequirements":{
             "mustBeInAClan":true,
             "mustBeLevel":1
          }
       },
+      {
+         "url":"https:\/\/www.war.app\/Forum\/888963-inaugural-clan-teams-cup-2026",
+         "name":"Clan Teams Cup",
+         "players":"84",
+         "description":"Clash between clans in a 2v2 and 3v3 tournament hosting a variety of templates!",
+         "joinRequirements":{
+            "mustBeInAClan":true,
+            "mustBeLevel":1
+         },
       {
          "url":"https:\/\/www.warzone.com\/Forum\/810684-introducing-titled-tuesdays",
          "name":"Titled Tuesdays",
@@ -58,8 +67,18 @@
          "joinRequirements":{
             "mustBeInAClan":false,
             "mustBeLevel":1
+         },
+      {
+         "url":"https:\/\/wz-xy.netlify.app\/modtourneys",
+         "name":"Mod Tourneys",
+         "players":"~20",
+         "description":"Monthly multi-day 1v1 tournaments on templates that use mods!",
+         "joinRequirements":{
+            "mustBeInAClan":true,
+            "mustBeLevel":1,
+            "mustBeMember":true
          }
       }
    ],
-   "datetime":"2026\/03\/16 18:00:00"
+   "datetime":"2026\/08\/29 18:00:00"
 } })
