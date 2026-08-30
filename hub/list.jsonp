@@ -7,8 +7,7 @@
          "description":"The Legendary Clan League!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":50,
-            "mustBeMember":false
+            "mustBeLevel":50
          }
       },
       {
@@ -18,8 +17,7 @@
          "description":"Play as a team to represent your nation!",
          "joinRequirements":{
             "mustBeInAClan":false,
-            "mustBeLevel":50,
-            "mustBeMember":false
+            "mustBeLevel":50
          }
       },
       {
@@ -29,8 +27,7 @@
          "description":"Prove your worth on a series of pro level tournaments",
          "joinRequirements":{
             "mustBeInAClan":false,
-            "mustBeLevel":50,
-            "mustBeMember":false
+            "mustBeLevel":50
          }
       },
       {
@@ -40,8 +37,7 @@
          "description":"Challenge your resilience in a wide range of strategic templates against other players",
          "joinRequirements":{
             "mustBeInAClan":false,
-            "mustBeLevel":54,
-            "mustBeMember":false
+            "mustBeLevel":54
          }
       },
       {
@@ -51,8 +47,7 @@
          "description":"Clash between clans in a 1v1 tournament hosting a variety of templates!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":1,
-            "mustBeMember":false
+            "mustBeLevel":1
          }
       },
       {
@@ -62,8 +57,7 @@
          "description":"Clash between clans in a 2v2 and 3v3 tournament hosting a variety of templates!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":1,
-            "mustBeMember":false
+            "mustBeLevel":1
          },
       {
          "url":"https:\/\/www.warzone.com\/Forum\/810684-introducing-titled-tuesdays",
@@ -72,8 +66,7 @@
          "description":"Compete with the best in real-time and win the right to choose the next edition's template!",
          "joinRequirements":{
             "mustBeInAClan":false,
-            "mustBeLevel":1,
-            "mustBeMember":false
+            "mustBeLevel":1
          },
       {
          "url":"https:\/\/wz-xy.netlify.app\/modtourneys",
@@ -82,10 +75,9 @@
          "description":"Monthly multi-day 1v1 tournaments on templates that use mods!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":1,
-            "mustBeMember":true
+            "mustBeLevel":1
          }
       }
    ],
-   "datetime":"2026\/08\/29 22:00:00"
+   "datetime":"2026\/08\/29 22:01:00"
 } })
