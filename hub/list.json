@@ -77,9 +77,10 @@
          "description":"Monthly multi-day 1v1 tournaments on templates that use mods!",
          "joinRequirements":{
             "mustBeInAClan":true,
-            "mustBeLevel":1
+            "mustBeLevel":1,
+            "mustBeMember":"Membership is required because it uses modded games"
          }
       }
    ],
-   "datetime":"2026\/08\/29 22:01:00"
+   "datetime":"2026\/08\/30 19:00:00"
 }
